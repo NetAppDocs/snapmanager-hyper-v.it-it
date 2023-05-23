@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head class="at-element-marker">
+  <title>Visualizzare una macchina virtuale</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Visualizzare una macchina virtuale" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/it-it/snapmanager-hyper-v/task-view-a-virtual-machine.html" />
+	<meta property="og:description" content="Dalla scheda Virtual Machine (macchina virtuale) e VHD (VHD) del riquadro Details (Dettagli) di una macchina virtuale, è possibile visualizzare informazioni ..." />
+  <meta property="og:image" content="https://docs.netapp.com/it-it/snapmanager-hyper-v/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Dalla scheda Virtual Machine (macchina virtuale) e VHD (VHD) del riquadro Details (Dettagli) di una macchina virtuale, è possibile visualizzare informazioni ...">
+  <meta name="keywords" content=" virtual, machine, tab, vhd, detail, pane, vm, information, monitor, status, view"><!-- Icons -->
+  <link rel="icon" href="/it-it/snapmanager-hyper-v/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/it-it/snapmanager-hyper-v/css/netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/it-it/snapmanager-hyper-v/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/it-it/snapmanager-hyper-v/css/tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/it-it/snapmanager-hyper-v/task-view-a-virtual-machine.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/snapmanager-hyper-v/task-view-a-virtual-machine.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/snapmanager-hyper-v/task-view-a-virtual-machine.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/snapmanager-hyper-v/task-view-a-virtual-machine.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/snapmanager-hyper-v/task-view-a-virtual-machine.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/snapmanager-hyper-v/task-view-a-virtual-machine.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/snapmanager-hyper-v/task-view-a-virtual-machine.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-view-a-virtual-machine.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/snapmanager-hyper-v/task-view-a-virtual-machine.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/snapmanager-hyper-v/task-view-a-virtual-machine.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/snapmanager-hyper-v/task-view-a-virtual-machine.html" />
+  <link rel='stylesheet' href='/it-it/snapmanager-hyper-v/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    function addAdobeLaunch(adobeId) {
+      var head = document.getElementsByTagName('head')[0];
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/"+adobeId+".min.js";
+      head.appendChild(adobe);
+    }
+
+    function addGoogleAnalytics(gtagId) {
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id="+gtagId;
+      var head = document.getElementsByTagName('head')[0];
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', gtagId);
+    }
+
+    function addConsent(consentId) {
+      var head = document.getElementsByTagName('head')[0];
+      var onetrustConsent = document.createElement("script");
+      onetrustConsent.type = "text/javascript";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/"+consentId+"/OtAutoBlock.js";
+      head.appendChild(onetrustConsent);
+
+      var onetrustScript = document.createElement("script");
+      onetrustScript.type = "text/javascript";
+      onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
+      onetrustScript.charset = "UTF-8";
+      onetrustScript.dataset.documentLanguage = "true";
+      onetrustScript.dataset.domainScript = consentId;
+      head.appendChild(onetrustScript);
+    }addConsent("72570c5c-fe30-465f-b0e0-b77f7fb4ae34");
+    addAdobeLaunch("launch-e9ff3acac59f");
+    addGoogleAnalytics("UA-81697994-3");function OptanonWrapper() { }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/it-it/snapmanager-hyper-v/js/na-search.js'></script><script src='/it-it/snapmanager-hyper-v/js/na-pagenav.js'></script><script src='/it-it/snapmanager-hyper-v/js/na-utility.js'></script>
+ <!--  
+  <link rel='stylesheet' href='/it-it/snapmanager-hyper-v/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/it-it/snapmanager-hyper-v/css/prism-netapp.css' type='text/css'>
+ -->
+
+  <!-- <script src='/it-it/snapmanager-hyper-v/js/na-utility.js'></script> -->
+  <script src='/it-it/snapmanager-hyper-v/js/clouddocs.js'></script>
+  <script src='/it-it/snapmanager-hyper-v/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- <script src='/it-it/snapmanager-hyper-v/js/toc.js'></script> -->
+  <!-- <script src='/it-it/snapmanager-hyper-v/js/customscripts.js'></script> --><script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+          $(".sidebar-nav-container").on("scroll", function() {
+            $.cookie("sidebarScroll", $(".sidebar-nav-container").scrollTop(), {
+              path    : "/it-it/snapmanager-hyper-v"  
+            });
+          });
+          $(function() {
+            if ($.cookie("sidebarScroll")) {
+              $(".sidebar-nav-container").scrollTop($.cookie("sidebarScroll"));
+            }
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script>
+  <script src='/it-it/snapmanager-hyper-v/js/custom-dropdown.js'></script>
+  <script src='/it-it/snapmanager-hyper-v/js/FileSaver.min.js'></script>
+  <script src='/it-it/snapmanager-hyper-v/js/jszip-utils.min.js'></script>
+  <script src='/it-it/snapmanager-hyper-v/js/jszip.min.js'></script>
+  <!-- <script src='/it-it/snapmanager-hyper-v/js/pdf-ux.js'></script> -->
+</head>
+
+
+  <body class role="document" data-flavor="">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/snapmanager-hyper-v.it-it/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/it-it/snapmanager-hyper-v/task-view-a-virtual-machine.html&page-title=Visualizzare una macchina virtuale" class="page-nav-contribute-link" role="button"><img src="/it-it/snapmanager-hyper-v/images/discuss-sm.svg" alt="" class="github-icon" />Richiedi modifiche alla documentazione</a><a target="_blank" href="https://github.com/NetAppDocs/snapmanager-hyper-v/blob/main/task-view-a-virtual-machine.adoc" class="page-nav-contribute-link" role="button"><img src="/it-it/snapmanager-hyper-v/images/edit-sm.svg" alt="" class="github-icon" />Modifica questa pagina</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/it-it/snapmanager-hyper-v/images/article-sm.svg" alt="" class="github-icon" />Scopri come collaborare</a></div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">IN QUESTA PAGINA</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">Prodotto e soluzioni</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">Supporto e training</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">Community</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">Blog</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">Testimonianze dei clienti</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/company/contact-us/" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contatto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/it-it/snapmanager-hyper-v/images/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/it-it/snapmanager-hyper-v/images/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/it-it/snapmanager-hyper-v/images/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/it-it/snapmanager-hyper-v/search.html"
+          data-type="widget" 
+          data-placeholder="Esplora la documentazione"
+          data-no-results-found="Nessun risultato per {query}"
+          data-did-you-mean="Cerca {suggestion}."
+          data-no-results-found-did-you-mean="Nessun risultato per {query}. Intendi {suggestion}?"
+          data-results-found="{hitCount} risultati trovati"
+          data-error-message="Si è verificato un problema durante il recupero dei risultati. Riprova."
+          data-error-reset="Reimposta ricerca"
+          data-sk-es-pf-indexes=""
+          data-flavor=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/it-it/snapmanager-hyper-v/images/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">Italiano</span>
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/it-it/snapmanager-hyper-v/images/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/it-it/snapmanager-hyper-v/task-view-a-virtual-machine.html" target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/snapmanager-hyper-v/task-view-a-virtual-machine.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/snapmanager-hyper-v/task-view-a-virtual-machine.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/snapmanager-hyper-v/task-view-a-virtual-machine.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/snapmanager-hyper-v/task-view-a-virtual-machine.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/snapmanager-hyper-v/task-view-a-virtual-machine.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/de-de/snapmanager-hyper-v/task-view-a-virtual-machine.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/es-es/snapmanager-hyper-v/task-view-a-virtual-machine.html" target="_self"><span translate="no" class="notranslate">Español</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/fr-fr/snapmanager-hyper-v/task-view-a-virtual-machine.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+        </li></ul>
+    </div>
+    <!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" id="sidebar-height">
+      <button id="btn-sidebar-collapse" onclick="hideSidebar()"><img src="/it-it/snapmanager-hyper-v/images/collapse.png" alt="Comprimi pannello di navigazione"></button>
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/it-it/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>PDF disponibili<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
+        <a target="_blank" href="/it-it/snapmanager-hyper-v/pdfs/fullsite-sidebar/Documentazione_di_SnapManager_per_Hyper_V_.pdf" >
+          <img src="/it-it/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>PDF del sito di questa documentazione</a>
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/snapmanager-hyper-v/pdfs/sidebar/Cos_è_SnapManager_per_Hyper_V_.pdf" 
+            
+          >
+            <img src="/it-it/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            Cos'è SnapManager per Hyper-V.
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/snapmanager-hyper-v/pdfs/sidebar/Elenco_dei_requisiti_per_l_installazione_di_SnapManager_per_Hyper_V_.pdf" 
+            
+          >
+            <img src="/it-it/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            Elenco dei requisiti per l'installazione di SnapManager per Hyper-V.
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/snapmanager-hyper-v/pdfs/sidebar/Installare_SnapManager_per_Hyper_V_.pdf" 
+            
+          >
+            <img src="/it-it/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            Installare SnapManager per Hyper-V.
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/snapmanager-hyper-v/pdfs/sidebar/Disinstallare_SnapManager_per_Hyper_V_su_Windows.pdf" 
+            
+          >
+            <img src="/it-it/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            Disinstallare SnapManager per Hyper-V su Windows
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/snapmanager-hyper-v/pdfs/sidebar/Configurare_SnapManager_per_Hyper_V_.pdf" 
+            
+          >
+            <img src="/it-it/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            Configurare SnapManager per Hyper-V.
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/snapmanager-hyper-v/pdfs/sidebar/Configurare_gli_host.pdf" 
+            
+          >
+            <img src="/it-it/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            Configurare gli host
+          </a>
+          
+
+
+
+
+
+
+
+
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/snapmanager-hyper-v/pdfs/sidebar/Impostazioni_di_notifica_degli_eventi.pdf" 
+            
+          >
+            <img src="/it-it/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            Impostazioni di notifica degli eventi
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/snapmanager-hyper-v/pdfs/sidebar/Configurare_le_impostazioni_della_directory_SnapInfo.pdf" 
+            
+          >
+            <img src="/it-it/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            Configurare le impostazioni della directory SnapInfo
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/snapmanager-hyper-v/pdfs/sidebar/Configurare_i_set_di_dati.pdf" 
+            
+          >
+            <img src="/it-it/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            Configurare i set di dati
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/snapmanager-hyper-v/pdfs/sidebar/Configurare_i_criteri.pdf" 
+            
+          >
+            <img src="/it-it/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            Configurare i criteri
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/snapmanager-hyper-v/pdfs/sidebar/Gestire_i_report.pdf" 
+            
+          >
+            <img src="/it-it/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            Gestire i report
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/snapmanager-hyper-v/pdfs/sidebar/Componenti_VSS.pdf" 
+            
+          >
+            <img src="/it-it/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            Componenti VSS
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/snapmanager-hyper-v/pdfs/sidebar/Creare_e_gestire_i_processi_di_backup_in_SnapManager_per_Hyper_V_.pdf" 
+            
+          >
+            <img src="/it-it/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            Creare e gestire i processi di backup in SnapManager per Hyper-V.
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/snapmanager-hyper-v/pdfs/sidebar/Ripristinare_una_macchina_virtuale_da_una_copia_di_backup.pdf" 
+            
+          >
+            <img src="/it-it/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            Ripristinare una macchina virtuale da una copia di backup
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/snapmanager-hyper-v/pdfs/sidebar/Eseguire_un_aggiornamento_in_sequenza_del_sistema_operativo_del_cluster.pdf" 
+            
+          >
+            <img src="/it-it/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            Eseguire un aggiornamento in sequenza del sistema operativo del cluster
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/snapmanager-hyper-v/pdfs/sidebar/Eseguire_il_disaster_recovery.pdf" 
+            
+          >
+            <img src="/it-it/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            Eseguire il disaster recovery
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/snapmanager-hyper-v/pdfs/sidebar/Risolvere_i_problemi_di_SnapManager_per_Hyper_V_.pdf" 
+            
+          >
+            <img src="/it-it/snapmanager-hyper-v/images/pdf.png" alt="" width="16" height="16"/>
+            Risolvere i problemi di SnapManager per Hyper-V.
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/it-it/snapmanager-hyper-v/images/pdf-zip.png" alt="" width="16" height="16"/>
+      <pre>Raccolta di documenti PDF separati<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="sidebar-nav-container" id="mysidebardiv">
+  <ul id="mysidebar" class="nav"><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Documenti di SnapManager per Hyper-V."
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/index.html">
+        Documenti di SnapManager per Hyper-V.
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Note di rilascio"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/release-notes.html">
+        Note di rilascio
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cos'è SnapManager per Hyper-V."
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="/it-it/snapmanager-hyper-v/concept-what-snapmanager-for-hyper-v-is.html">
+        <div class="na-navbar-padding"> Cos'è SnapManager per Hyper-V.</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cosa puoi fare con SnapManager per Hyper-V."
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/concept-what-you-can-do-with-snapmanager-for-hyper-v.html">
+        Cosa puoi fare con SnapManager per Hyper-V.
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Elenco delle limitazioni di SnapManager per Hyper-V."
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/concept-snapmanager-for-hyper-v-limitations.html">
+        Elenco delle limitazioni di SnapManager per Hyper-V.
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Concetti di gestione dei dati"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/concept-data-management-concepts.html">
+        Concetti di gestione dei dati
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Elenco dei requisiti per l'installazione di SnapManager per Hyper-V."
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="/it-it/snapmanager-hyper-v/reference-list-of-requirements-for-installing-snapmanager-for-hyper-v.html">
+        <div class="na-navbar-padding"> Elenco dei requisiti per l'installazione di SnapManager per Hyper-V.</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Licenza SnapManager per Hyper-V per ONTAP"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-snapmanager-for-hyper-v-licensing-for-ontap.html">
+        Licenza SnapManager per Hyper-V per ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisiti dell'host principale Hyper-V."
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-hyper-v-parent-host-requirements.html">
+        Requisiti dell'host principale Hyper-V.
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisiti di hotfix per gli ambienti Windows Server"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-hotfix-requirements-for-windows-server-environments.html">
+        Requisiti di hotfix per gli ambienti Windows Server
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisiti di licenza"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-license-requirements.html">
+        Requisiti di licenza
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisiti per l'utilizzo dell'Installazione guidata host remoto"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-requirements-for-remote-host-install.html">
+        Requisiti per l'utilizzo dell'Installazione guidata host remoto
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Installare SnapManager per Hyper-V."
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="/it-it/snapmanager-hyper-v/concept-install-snapmanager-for-hyper-v.html">
+        <div class="na-navbar-padding"> Installare SnapManager per Hyper-V.</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Scarica SnapManager per Hyper-V."
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-download-snapmanager-for-hyper-v.html">
+        Scarica SnapManager per Hyper-V.
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ordine di installazione per SnapDrive per Windows e SnapManager per Hyper-V."
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/concept-installation-order-for-snapdrive-for-windows-and-snapmanager-for-hyper-v.html">
+        Ordine di installazione per SnapDrive per Windows e SnapManager per Hyper-V.
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Installare SnapManager per Hyper-V."
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-install-snapmanager-for-hyper-v.html">
+        Installare SnapManager per Hyper-V.
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Installare o disinstallare in remoto SnapManager per Hyper-V su nodi o host"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-remotely-install-or-uninstall-snapmanager-for-hyper-v-on-nodes.html">
+        Installare o disinstallare in remoto SnapManager per Hyper-V su nodi o host
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Elenco e descrizione degli switch della riga di comando per l'installazione automatica"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-command-line-switch-descriptions.html">
+        Elenco e descrizione degli switch della riga di comando per l'installazione automatica
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Disinstallare SnapManager per Hyper-V su Windows"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="/it-it/snapmanager-hyper-v/concept-uninstall-snapmanager-for-hyper-v-on-windows.html">
+        <div class="na-navbar-padding"> Disinstallare SnapManager per Hyper-V su Windows</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Disinstallare SnapManager per Hyper-V."
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-uninstall-snapmanager-for-hyper-v.html">
+        Disinstallare SnapManager per Hyper-V.
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurare SnapManager per Hyper-V."
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="/it-it/snapmanager-hyper-v/concept-configure-snapmanager-for-hyper-v.html">
+        <div class="na-navbar-padding"> Configurare SnapManager per Hyper-V.</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Impostazioni della dashboard"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/concept-dashboard-settings.html">
+        Impostazioni della dashboard
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurare gli host"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="/it-it/snapmanager-hyper-v/concept-configure-hosts.html">
+        <div class="na-navbar-padding"> Configurare gli host</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisiti per l'aggiunta di un host o di un cluster host padre Hyper-V."
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-requirements-for-adding-a-hyper-v-parent-host-or-host-cluster.html">
+        Requisiti per l'aggiunta di un host o di un cluster host padre Hyper-V.
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggiungere un host o un cluster host padre Hyper-V."
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-add-a-hyper-v-parent-host-or-host-cluster.html">
+        Aggiungere un host o un cluster host padre Hyper-V.
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestire le impostazioni di connessione allo storage"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-manage-storage-connection-settings.html">
+        Gestire le impostazioni di connessione allo storage
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Visualizzare un host o un cluster host padre Hyper-V."
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-view-a-hyper-v-parent-host-or-host-cluster.html">
+        Visualizzare un host o un cluster host padre Hyper-V.
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Visualizzare una macchina virtuale"
+      data-li-level="3#" 
+      class="  active "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-view-a-virtual-machine.html">
+        Visualizzare una macchina virtuale
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Eseguire la migrazione di una macchina virtuale Hyper-V per SnapManager per le operazioni Hyper-V."
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-migrate-a-hyper-v-virtual-machine-to-support-snapmanager-for-hyper-v-operations.html">
+        Eseguire la migrazione di una macchina virtuale Hyper-V per SnapManager per le operazioni Hyper-V.
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Importare o esportare le informazioni di configurazione di host e dataset"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-import-or-export-host-and-dataset-configuration-information.html">
+        Importare o esportare le informazioni di configurazione di host e dataset
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Rimuovere un host padre Hyper-V o un cluster di host padre"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-remove-a-hyper-v-parent-host.html">
+        Rimuovere un host padre Hyper-V o un cluster di host padre
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Impostazioni di notifica degli eventi"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="/it-it/snapmanager-hyper-v/concept-event-notification-settings.html">
+        <div class="na-navbar-padding"> Impostazioni di notifica degli eventi</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurare le notifiche e-mail"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/concept-configure-multiple-recipients-for-email-notifications-in-smhv.html">
+        Configurare le notifiche e-mail
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Impostazioni del percorso del report"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/concept-report-path-settings.html">
+        Impostazioni del percorso del report
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurare le impostazioni della directory SnapInfo"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="/it-it/snapmanager-hyper-v/concept-configure-snapinfo-directory-settings.html">
+        <div class="na-navbar-padding"> Configurare le impostazioni della directory SnapInfo</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurare un LUN SnapInfo"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-set-up-a-snapinfo-lun.html">
+        Configurare un LUN SnapInfo
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modificare il percorso della directory SnapInfo"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-change-the-snapinfo-directory-path.html">
+        Modificare il percorso della directory SnapInfo
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurare i set di dati"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="/it-it/snapmanager-hyper-v/concept-configure-datasets.html">
+        <div class="na-navbar-padding"> Configurare i set di dati</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisiti per la creazione di un dataset"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-requirements-for-creating-a-dataset.html">
+        Requisiti per la creazione di un dataset
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Creare un dataset"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-create-a-dataset.html">
+        Creare un dataset
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modificare un dataset"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-modify-a-dataset.html">
+        Modificare un dataset
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Visualizzare un set di dati"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-view-a-dataset.html">
+        Visualizzare un set di dati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Eliminare un dataset"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-delete-a-dataset.html">
+        Eliminare un dataset
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurare i criteri"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="/it-it/snapmanager-hyper-v/concept-configure-policies.html">
+        <div class="na-navbar-padding"> Configurare i criteri</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisiti per l'aggiunta di policy a un dataset"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-requirements-for-adding-policies-to-a-dataset.html">
+        Requisiti per l'aggiunta di policy a un dataset
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggiungere policy"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-add-policies.html">
+        Aggiungere policy
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modificare i criteri"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-modify-policies.html">
+        Modificare i criteri
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Visualizzare le policy"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-view-policies.html">
+        Visualizzare le policy
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Eliminare i criteri"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-delete-policies.html">
+        Eliminare i criteri
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurare server SVM o CIFS per Hyper-V su SMB"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/concept-configure-svms-or-cifs-servers-for-hyper-v-over-smb.html">
+        Configurare server SVM o CIFS per Hyper-V su SMB
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestire i report"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="/it-it/snapmanager-hyper-v/concept-report-management.html">
+        <div class="na-navbar-padding"> Gestire i report</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Visualizzare un report del dataset"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-view-a-report.html">
+        Visualizzare un report del dataset
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Visualizzare un report host"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-view-a-host-report.html">
+        Visualizzare un report host
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Eliminare un report"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-delete-a-report.html">
+        Eliminare un report
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Componenti VSS"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="/it-it/snapmanager-hyper-v/concept-overview-of-vss-components.html">
+        <div class="na-navbar-padding"> Componenti VSS</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="CSV 2.0 in Windows Server 2012 e versioni successive"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/concept-cluster-shared-volume-2-0-architecture.html">
+        CSV 2.0 in Windows Server 2012 e versioni successive
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Supporto SMB 3.0 per macchine virtuali Hyper-V in Windows Server 2012"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-smb-3-0-support-hyper-v-vms-in-windows-server-2012.html">
+        Supporto SMB 3.0 per macchine virtuali Hyper-V in Windows Server 2012
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Utilizzo di VSS da parte di SnapManager per Hyper-V."
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/concept-how-snapmanager-for-hyper-v-uses-vss.html">
+        Utilizzo di VSS da parte di SnapManager per Hyper-V.
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisito del provider hardware VSS di ONTAP"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/concept-ontap-vss-hardware-provider-requirement.html">
+        Requisito del provider hardware VSS di ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Visualizzare i provider VSS installati"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-view-installed-vss-providers.html">
+        Visualizzare i provider VSS installati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Verificare che il provider hardware VSS sia stato utilizzato correttamente"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-verify-that-the-vss-hardware-provider-was-used-successfully.html">
+        Verificare che il provider hardware VSS sia stato utilizzato correttamente
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Creare e gestire i processi di backup in SnapManager per Hyper-V."
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="/it-it/snapmanager-hyper-v/concept-create-and-manage-backup-jobs-in-snapmanager-for-hyper-v.html">
+        <div class="na-navbar-padding"> Creare e gestire i processi di backup in SnapManager per Hyper-V.</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisiti per il backup manuale di un set di dati"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-requirements-for-manually-backing-up-a-dataset.html">
+        Requisiti per il backup manuale di un set di dati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="In che modo SnapManager per Hyper-V gestisce i backup con stato salvato"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/concept-how-snapmanager-for-hyper-v-handles-saved-state-backups.html">
+        In che modo SnapManager per Hyper-V gestisce i backup con stato salvato
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Backup manuale di un set di dati"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-manually-backing-up-a-dataset.html">
+        Backup manuale di un set di dati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Monitorare i processi di backup"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-monitor-backup-jobs.html">
+        Monitorare i processi di backup
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Eliminare un backup"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-delete-a-backup.html">
+        Eliminare un backup
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ripristinare una macchina virtuale da una copia di backup"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="/it-it/snapmanager-hyper-v/concept-restore-a-virtual-machine.html">
+        <div class="na-navbar-padding"> Ripristinare una macchina virtuale da una copia di backup</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisiti per il ripristino di una macchina virtuale"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-requirements-for-restoring-a-virtual-machine.html">
+        Requisiti per il ripristino di una macchina virtuale
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ripristinare una macchina virtuale da una copia di backup"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-restore-a-virtual-machine-from-a-backup-copy.html">
+        Ripristinare una macchina virtuale da una copia di backup
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Eseguire un aggiornamento in sequenza del sistema operativo del cluster"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="/it-it/snapmanager-hyper-v/concept-perform-a-cluster-os-rolling-upgrade.html">
+        <div class="na-navbar-padding"> Eseguire un aggiornamento in sequenza del sistema operativo del cluster</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Mappare i LUN in modalità sistema operativo misto"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-map-luns-after-the-windows-server-2016-node-addition.html">
+        Mappare i LUN in modalità sistema operativo misto
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggiornare il set di dati e SnapInfo su tutti i nodi"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-update-the-dataset-and-snapinfo-across-all-nodes.html">
+        Aggiornare il set di dati e SnapInfo su tutti i nodi
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Eseguire il disaster recovery"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="/it-it/snapmanager-hyper-v/concept-perform-disaster-recovery.html">
+        <div class="na-navbar-padding"> Eseguire il disaster recovery</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurare SnapManager per Hyper-V per il failover"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/concept-configure-snapmanager-for-hyper-v-for-failover.html">
+        Configurare SnapManager per Hyper-V per il failover
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ripristino e ripristino da un failover di disaster recovery"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-recover-and-restore-from-a-disaster-recovery-failover.html">
+        Ripristino e ripristino da un failover di disaster recovery
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Riconfigurare i sistemi storage dopo un failback di disaster recovery"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-reconfigure-storage-systems-after-a-disaster-recovery-failback.html">
+        Riconfigurare i sistemi storage dopo un failback di disaster recovery
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ripristinare la configurazione originale per gli host standalone"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-restore-the-original-configuration-for-standalone-hosts.html">
+        Ripristinare la configurazione originale per gli host standalone
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ripristinare la configurazione originale per gli host in cluster"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/task-restore-the-original-configuration-for-clustered-hosts.html">
+        Ripristinare la configurazione originale per gli host in cluster
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Risolvere i problemi di SnapManager per Hyper-V."
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="/it-it/snapmanager-hyper-v/concept-snapmanager-for-hyper-v-troubleshoot.html">
+        <div class="na-navbar-padding"> Risolvere i problemi di SnapManager per Hyper-V.</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Backup non riuscito per le seguenti macchine virtuali poiché non è possibile eseguire il backup online o non è stata trovata alcuna macchina virtuale per il backup"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-backup-failed-for-the-following-vm-s-since-it-cannot-be-backedup-online-or-no-vm-to-be-found-for-backup.html">
+        Backup non riuscito per le seguenti macchine virtuali poiché non è possibile eseguire il backup online o non è stata trovata alcuna macchina virtuale per il backup
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Errore imprevisto durante la query per l'interfaccia IVssWriterCallback. hr = 0x80070005, accesso negato."
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-unexpected-error-querying-for-the-ivsswritercallback-interface-hr-0x80070005.html">
+        Errore imprevisto durante la query per l'interfaccia IVssWriterCallback. hr = 0x80070005, accesso negato.
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="I report di backup utilizzano le informazioni sul fuso orario della console di gestione nel nome del report"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-backup-reports-use-management-console-time-zone-information-in-report-name.html">
+        I report di backup utilizzano le informazioni sul fuso orario della console di gestione nel nome del report
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Le notifiche di backup e ripristino non vengono inviate negli ambienti solo IPv6"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-backup-and-restore-notifications-not-sent-in-ipv6-only-environments.html">
+        Le notifiche di backup e ripristino non vengono inviate negli ambienti solo IPv6
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ID evento clustering di failover 5121"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-failover-clustering-event-id-5121.html">
+        ID evento clustering di failover 5121
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="I backup delle macchine virtuali eseguiti durante un'operazione di ripristino potrebbero non essere validi"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-virtual-machine-backups-made-while-a-restore-operation-is-in-progress-might-be-invalid.html">
+        I backup delle macchine virtuali eseguiti durante un'operazione di ripristino potrebbero non essere validi
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestione automatica delle macchine virtuali"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-virtual-machine-adding-itself-to-a-dataset.html">
+        Gestione automatica delle macchine virtuali
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Il tempo di connessione è maggiore con l'host solo IPv6"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-connection-time-is-longer-with-ipv6-only-host.html">
+        Il tempo di connessione è maggiore con l'host solo IPv6
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Errore Volume Shadow Copy Service: È stata rilevata un'incoerenza interna"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-volume-shadow-copy-service-error-an-internal-inconsistency-was-detected.html">
+        Errore Volume Shadow Copy Service: È stata rilevata un'incoerenza interna
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Il canale Web Service Client non è riuscito a connettersi all'istanza di ConfigurationManagementService sul computer smhv51_81 clus"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-web-service-client-channel-was-unable-to-connect-to-the-configurationmanagementservice-instance-on-machine-smhv51-81clus.html">
+        Il canale Web Service Client non è riuscito a connettersi all'istanza di ConfigurationManagementService sul computer smhv51_81 clus
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Proprietà personalizzata MSI utilizzata nell'installazione invisibile all'utente"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-msi-custom-property-used-in-silent-installation.html">
+        Proprietà personalizzata MSI utilizzata nell'installazione invisibile all'utente
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SnapManager per Hyper-V non è concesso in licenza sull'host o nel sistema storage"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-snapmanager-for-hyper-v-is-not-licensed-on-the-host-or-in-the-storage-system.html">
+        SnapManager per Hyper-V non è concesso in licenza sull'host o nel sistema storage
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Eliminare i backup dopo il failover"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-secondary-machine-unable-to-delete-backups-after-failover.html">
+        Eliminare i backup dopo il failover
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Le performance dello storage si degradano dopo un backup non riuscito"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-storage-performance-degrades-after-failed-backup.html">
+        Le performance dello storage si degradano dopo un backup non riuscito
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Copie Snapshot SnapInfo eliminate"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-retention-of-snapinfo-snapshot-copies.html">
+        Copie Snapshot SnapInfo eliminate
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Elevato consumo di memoria causato dalla soluzione antivirus"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-high-memory-consumption-caused-by-antivirus-solution.html">
+        Elevato consumo di memoria causato dalla soluzione antivirus
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Consumo di spazio durante l'esecuzione di due copie Snapshot per ciascun backup"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-space-consumption-when-making-two-snapshot-copies-for-each-backup.html">
+        Consumo di spazio durante l'esecuzione di due copie Snapshot per ciascun backup
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="La risposta SDDiscoveryFileSystemListInfo di SnapDrive è nulla durante il backup"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-error-snapdrive-sddiscoveryfilesystemlistinfo-response-is-null.html">
+        La risposta SDDiscoveryFileSystemListInfo di SnapDrive è nulla durante il backup
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Errore: Richiedente VSS - componenti di backup non riusciti"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed.html">
+        Errore: Richiedente VSS - componenti di backup non riusciti
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Richiedente VSS - componenti di backup non riusciti. Il disco previsto non è arrivato nel sistema"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-error-vss-requestor-backup-components-failed-an-expected-disk-did-not-arrive-in-the-system.html">
+        Richiedente VSS - componenti di backup non riusciti. Il disco previsto non è arrivato nel sistema
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Richiedente VSS - componenti di backup non riusciti con errore di scrittura parziale"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-dataset-backup-might-fail-with-a-partial-writer-error.html">
+        Richiedente VSS - componenti di backup non riusciti con errore di scrittura parziale
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSS restituisce errori rispetto a Microsoft iSCSI Target VSS hardware Provider durante il backup NAS"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-vss-returns-errors-against-microsoft-iscsi-target-vss-hardware-provider-during-nas-backup.html">
+        VSS restituisce errori rispetto a Microsoft iSCSI Target VSS hardware Provider durante il backup NAS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Richiedente VSS - componenti di backup non riusciti. Impossibile chiamare Mantieni snapshot impostato."
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-vss-requestor-backup-components-failed-failed-to-call-keep-snapshot-set.html">
+        Richiedente VSS - componenti di backup non riusciti. Impossibile chiamare Mantieni snapshot impostato.
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="LUN MBR non supportati in SnapManager per Hyper-V."
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-mbr-luns-unsupported-in-snapmanager-for-hyper-v.html">
+        LUN MBR non supportati in SnapManager per Hyper-V.
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Il backup non riesce dopo la rimozione di una macchina virtuale da Hyper-V Manager"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-backup-fails-after-removing-virtual-machine-from-hyper-v-manager.html">
+        Il backup non riesce dopo la rimozione di una macchina virtuale da Hyper-V Manager
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Alcuni tipi di errori di backup non comportano errori di backup parziali"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-some-types-of-failures-do-not-generate-error-message.html">
+        Alcuni tipi di errori di backup non comportano errori di backup parziali
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Errore di ripristino dopo la ridenominazione del volume del sistema di storage"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-restore-failure-after-storage-system-volume-renaming.html">
+        Errore di ripristino dopo la ridenominazione del volume del sistema di storage
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Eseguire il ripristino da un backup dopo il failback"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-restore-from-a-backup-after-failback.html">
+        Eseguire il ripristino da un backup dopo il failback
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Il canale Web Service Client non riesce a connettersi durante l'aggiornamento del dataset al nuovo nodo"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-web-service-client-channel-unable-to-connect-while-updating-the-dataset-to-the-new-node.html">
+        Il canale Web Service Client non riesce a connettersi durante l'aggiornamento del dataset al nuovo nodo
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="I set di dati non vengono replicati automaticamente nei nuovi nodi in un cluster di failover di Windows"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-datasets-are-not-automatically-replicated-to-new-nodes-in-a-windows-failover-cluster.html">
+        I set di dati non vengono replicati automaticamente nei nuovi nodi in un cluster di failover di Windows
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Errore 1935. Si è verificato un errore durante l'installazione del componente dell'assieme"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-error-1935-an-error-occurred-during-the-installation-of-assembly-component.html">
+        Errore 1935. Si è verificato un errore durante l'installazione del componente dell'assieme
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="I processi di backup che coinvolgono più di 15 CSV dallo stesso sistema di storage potrebbero non funzionare"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-backup-jobs-that-involve-more-than-15-csvs-from-the-same-filer-fail-with-rename-snapshot-error.html">
+        I processi di backup che coinvolgono più di 15 CSV dallo stesso sistema di storage potrebbero non funzionare
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Le VM specificate non sono presenti o non è possibile eseguarne il backup online"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-either-the-specified-vm-s-are-not-present-or-they-cannot-be-backed-up-online.html">
+        Le VM specificate non sono presenti o non è possibile eseguarne il backup online
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="La correzione rapida richiesta KB2263829 non può essere installata su alcune piattaforme"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-required-hotfix-kb2263829-cannot-be-installed-on-some-platforms.html">
+        La correzione rapida richiesta KB2263829 non può essere installata su alcune piattaforme
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Errore di backup con l'errore "creazione copia shadow già in corso""
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/reference-backup-fail-with-the-error-shadow-copy-creation-is-already-in-progress.html">
+        Errore di backup con l'errore "creazione copia shadow già in corso"
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Note legali"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/snapmanager-hyper-v/legal-notices.html">
+        Note legali
+      </a></li></ul>
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+<script>$("#mysidebar li.active").parents('ul').css("display","block");</script>
+
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <div class="ie-utility">
+  <button id="btn-sidebar-expand" onclick="showSidebar()"><img src="/it-it/snapmanager-hyper-v/images/expand.png" alt="Espandi pannello di navigazione"></button>
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
+        </li>
+        
+
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/it-it/snapmanager-hyper-v/">SnapManager&nbsp;for&nbsp;Hyper-V</a>
+        </li>
+
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/it-it/snapmanager-hyper-v/images/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> La versione in lingua italiana fornita proviene da una traduzione automatica. Per eventuali incoerenze, fare riferimento alla versione in lingua inglese. </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">Visualizzare una macchina virtuale</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2023-05-23 15:45:09 +0000">05/23/2023</time>
+    
+  
+
+<span>Collaboratori
+</span>
+
+
+</p>
+
+<div class="paragraph lead">
+<p>Dalla scheda Virtual Machine (macchina virtuale) e VHD (VHD) del riquadro Details (Dettagli) di una macchina virtuale, è possibile visualizzare informazioni e monitorare lo stato di tale macchina.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Fasi</div>
+<ol class="arabic">
+<li>
+<p>Dal riquadro di navigazione, fare clic su <span class="menuseq"><b class="menu">protezione</b>&#160;<b class="caret">&#8250;</b> <b class="submenu">host</b>&#160;<b class="caret">&#8250;</b> <b class="submenu">protezione</b>&#160;<b class="caret">&#8250;</b> <b class="menuitem">dataset</b></span>.</p>
+</li>
+<li>
+<p>Selezionare il set di dati o l&#8217;host a cui appartiene la macchina virtuale.</p>
+</li>
+<li>
+<p>Selezionare la macchina virtuale appropriata.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Risultati</div>
+<p>La scheda Virtual Machine (macchina virtuale) visualizza il nome, il GUID e lo stato della macchina virtuale selezionata.</p>
+</div>
+<div class="paragraph">
+<p>La scheda VHD visualizza il disco di sistema, il punto di montaggio, il percorso completo VHD, il percorso LUN, il nome del sistema di storage, numero di serie e nome del volume associati alla macchina virtuale selezionata.</p>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/copyright/">© 2023 NetApp, Inc.</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">Condizioni per l'utilizzo</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Direttiva sulla privacy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Direttiva sui Cookie</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Impostazioni cookie</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-footer__bottom-right">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a target="_self" href="javascript:netapp_mailto()">Invia feedback su questa pagina</a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-footer__social-links">
+          <ul class="n-footer__social-link-list">
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com"
+                target="_blank" title="blog" alt="blog">
+                <span class="n-footer__social-link-text">blog</span>
+                <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                  <title>blog@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/snapmanager-hyper-v/images/sprite.svg#blog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/"
+                target="_blank" title="community" alt="community">
+                <span class="n-footer__social-link-text">community</span>
+                <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+                  <title>community@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/snapmanager-hyper-v/images/sprite.svg#comments"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp"
+                target="_blank" title="twitter" alt="twitter">
+                <span class="n-footer__social-link-text">twitter</span>
+                <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                  <title>twitter@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/snapmanager-hyper-v/images/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp"
+                target="_blank" title="facebook" alt="facebook">
+                <span class="n-footer__social-link-text">facebook</span>
+                <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+                  <title>facebook@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/snapmanager-hyper-v/images/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-linkedin"
+                href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+                <span class="n-footer__social-link-text">linkedin</span>
+                <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+                  <title>linkedin@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/snapmanager-hyper-v/images/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-youtube"
+                href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+                <span class="n-footer__social-link-text">youtube</span>
+                <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                  <title>youtube@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/snapmanager-hyper-v/images/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-slideshare"
+                href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+                <span class="n-footer__social-link-text">slideshare</span>
+                <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+                  <title>slideshare@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/snapmanager-hyper-v/images/sprite.svg#slideshare"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/it-it/snapmanager-hyper-v/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/it-it/snapmanager-hyper-v/js/prism.js'></script>
+      <script type="text/javascript" src='/it-it/snapmanager-hyper-v/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/it-it/snapmanager-hyper-v/js/tabbed-blocks.js'></script>
+    <script src='/it-it/snapmanager-hyper-v/js/sidebar.js'></script>
+  </body></html>
