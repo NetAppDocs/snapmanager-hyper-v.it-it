@@ -1,0 +1,14 @@
+---
+permalink: concept-configure-policies.html 
+sidebar: sidebar 
+keywords: add, modify, delete, policies, policy, associate, dataset, protect, data, configuring, configure 
+summary: È possibile aggiungere, modificare o eliminare le policy associate ai set di dati in modo da proteggere i dati. 
+---
+= configurare i criteri
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile aggiungere, modificare o eliminare le policy associate ai set di dati in modo da proteggere i dati.

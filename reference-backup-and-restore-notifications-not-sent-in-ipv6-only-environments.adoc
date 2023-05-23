@@ -1,0 +1,25 @@
+---
+permalink: reference-backup-and-restore-notifications-not-sent-in-ipv6-only-environments.html 
+sidebar: sidebar 
+keywords: backup, restore, notification, ipv6-only, environment 
+summary: Le notifiche di backup e ripristino non vengono inviate negli ambienti solo IPv6. 
+---
+= Le notifiche di backup e ripristino non vengono inviate negli ambienti solo IPv6
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Problema*
++
+Quando si esegue un host solo IPv6, non si ricevono notifiche di operazioni di backup o ripristino.
+
+* *Causa*
++
+Il server SMTP non supporta IPv6 o non dispone di IPv6 abilitato.
+
+* *Azione correttiva*
++
+Attivare IPv6 sul server SMTP.
+
+

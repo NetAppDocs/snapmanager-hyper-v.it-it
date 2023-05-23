@@ -1,0 +1,23 @@
+---
+permalink: task-view-a-hyper-v-parent-host-or-host-cluster.html 
+sidebar: sidebar 
+keywords: view, configuration, information, specific, hyper-v, parent, host, cluster, monitor, status 
+summary: È possibile visualizzare le informazioni di configurazione relative a un host o a un cluster host padre Hyper-V specifico in modo da monitorarne lo stato. 
+---
+= Visualizzare un host o un cluster host padre Hyper-V.
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile visualizzare le informazioni di configurazione relative a un host o a un cluster host padre Hyper-V specifico in modo da monitorarne lo stato.
+
+.Fasi
+. Dal riquadro di navigazione, fare clic su menu:protezione[host].
+. Selezionare l'host o il cluster host che si desidera visualizzare.
++
+Il riquadro Dettagli visualizza il nome del cluster host o host, il dominio, i membri del cluster (se applicabile) e i messaggi di configurazione. Se si seleziona un host non configurato, nel riquadro Dettagli vengono visualizzate informazioni su ciò che non è configurato.
+
+

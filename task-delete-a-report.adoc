@@ -1,0 +1,22 @@
+---
+permalink: task-delete-a-report.html 
+sidebar: sidebar 
+keywords: delete, report, deleting 
+summary: È possibile eliminare uno o più report quando non sono più necessari. 
+---
+= Eliminare un report
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile eliminare uno o più report quando non sono più necessari.
+
+.Fasi
+. Dal riquadro di navigazione, fare clic su menu:Report[dataset] o menu:Report[host].
+. Selezionare il dataset, la macchina virtuale o l'host che contiene il report o i report che si desidera eliminare.
+. Dal riquadro Report, selezionare il report o i report che si desidera eliminare.
+. Dal riquadro delle azioni, fare clic su *Delete report* (Elimina report) e fare clic su *OK* per eliminarlo.
+

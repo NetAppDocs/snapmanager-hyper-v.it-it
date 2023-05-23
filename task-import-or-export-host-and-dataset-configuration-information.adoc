@@ -1,0 +1,34 @@
+---
+permalink: task-import-or-export-host-and-dataset-configuration-information.html 
+sidebar: sidebar 
+keywords: manage, host, management, console, multiple, import, export, information, dataset, consistency 
+summary: 'Sebbene sia necessario gestire un host da una sola console di gestione, se è necessario farlo da più console, è possibile importare ed esportare le informazioni di configurazione di host e dataset da una console di gestione remota a un"altra per garantire la coerenza dei dati.' 
+---
+= Importare o esportare le informazioni di configurazione di host e dataset
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sebbene sia necessario gestire un host da una sola console di gestione, se è necessario farlo da più console, è possibile importare ed esportare le informazioni di configurazione di host e dataset da una console di gestione remota a un'altra per garantire la coerenza dei dati.
+
+.A proposito di questa attività
+Non importare o esportare le informazioni di configurazione nella directory in cui è installato SnapManager per Hyper-V. Se si disinstalla SnapManager per Hyper-V, il file viene perso.
+
+
+NOTE: È possibile utilizzare la procedura guidata di importazione ed esportazione per modificare le impostazioni di configurazione dell'host e del dataset in un'impostazione precedentemente esportata. Se si esegue questa operazione in un ambiente cluster, è necessario importare le impostazioni su tutti i nodi del cluster in modo che tutte le configurazioni di host e dataset siano identiche.
+
+.Fasi
+. Dal riquadro di navigazione, fare clic su *Protection* (protezione).
+. Dal riquadro *azioni*, fare clic su *Importa ed esporta*.
++
+Viene visualizzata la procedura guidata di importazione ed esportazione.
+
+. Completare i passaggi della procedura guidata per esportare le informazioni di configurazione dell'host e del dataset da una console di gestione a un'altra.
++
+
+NOTE: Il file di esportazione è statico e corrente solo al momento dell'esecuzione del file di esportazione.
+
+. Completare i passaggi della procedura guidata per importare le informazioni di configurazione dell'host e del dataset nella console di gestione di destinazione.
+

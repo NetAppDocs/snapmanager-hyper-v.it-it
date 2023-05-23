@@ -1,0 +1,38 @@
+---
+permalink: reference-space-consumption-when-making-two-snapshot-copies-for-each-backup.html 
+sidebar: sidebar 
+keywords: space, consumption, snapshot, copies, copy, backup 
+summary: 'Consumo di spazio durante l"esecuzione di due copie Snapshot per ciascun backup.' 
+---
+= Consumo di spazio durante l'esecuzione di due copie Snapshot per ciascun backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Problema*
++
+Per ogni backup contenente oggetti Hyper-V, vengono create due copie Snapshot, che possono generare preoccupazioni sul consumo di spazio.
+
++
+
+NOTE: Questo vale solo per i backup coerenti con l'applicazione.
+
+* *Causa*
++
+Microsoft Hyper-V VSS Writer crea copie di backup coerenti con le macchine virtuali e con le applicazioni all'interno delle macchine virtuali, con le applicazioni che risiedono sui VHD. Per creare copie di backup coerenti con il software e con le macchine virtuali, VSS utilizza il processo di autorecovery nativo, che imposta la macchina virtuale su uno stato coerente con la copia Snapshot del software. Il writer VSS Hyper-V contatta ogni macchina virtuale nel backup e crea una copia Snapshot coerente con il software.
+
++
+Una volta create le copie Snapshot, la partizione padre crea una copia Snapshot VSS dell'intero disco (LUN) che ospita queste macchine virtuali. Una volta creata la copia Snapshot della partizione padre, il VSS richiede il montaggio della partizione padre precedentemente creata, per riportare ciascuna VM allo stato coerente con il software e rimuovere le modifiche apportate alle VM dopo la creazione della copia Snapshot software. Queste modifiche ai VHD devono essere rese persistenti. Poiché queste copie Snapshot sono di sola lettura per impostazione predefinita, è necessario creare una nuova copia Snapshot per conservare le copie aggiornate dei VHD. Per questo motivo, viene creata una seconda copia Snapshot del volume. Questa copia Snapshot è contrassegnata con il suffisso *_backup* ed è la copia di backup utilizzata nelle operazioni di ripristino.
+
+* *Azione correttiva*
++
+Le due copie Snapshot sono considerate una coppia. Al termine del periodo di conservazione per il backup, entrambe le copie Snapshot vengono eliminate. Non eliminare manualmente la prima copia Snapshot, poiché è necessaria per le operazioni di ripristino.
+
++
+Microsoft VSS supporta il backup delle macchine virtuali solo sull'host che possiede il Cluster Shared Volume (CSV), pertanto la proprietà CSV si sposta tra i nodi per creare backup delle macchine virtuali su ciascun host del cluster.
+
++
+Quando si esegue il backup di un CSV, SnapManager per Hyper-V crea due copie Snapshot per host nel cluster che esegue una VM da tale CSV. Ciò significa che se si esegue il backup di 15 VM su un singolo CSV e tali VM sono equamente suddivise in tre server Hyper-V, si ha un totale di sei copie Snapshot per backup.
+
+

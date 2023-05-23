@@ -1,0 +1,18 @@
+---
+permalink: concept-installation-order-for-snapdrive-for-windows-and-snapmanager-for-hyper-v.html 
+sidebar: sidebar 
+keywords: install, snapdrive, windows, hyper-v, cluster, snapdrive 
+summary: 'È necessario installare SnapDrive per Windows su tutti gli host prima di installare SnapManager per Hyper-V. Se gli host sono membri di un cluster, tutti i nodi del cluster richiedono l"installazione di SnapDrive per Windows.' 
+---
+= Ordine di installazione per SnapDrive per Windows e SnapManager per Hyper-V.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È necessario installare SnapDrive per Windows su tutti gli host prima di installare SnapManager per Hyper-V. Se gli host sono membri di un cluster, tutti i nodi del cluster richiedono l'installazione di SnapDrive per Windows.
+
+All'avvio di SnapManager per Hyper-V, comunica con SnapDrive per Windows per ottenere l'elenco di tutte le macchine virtuali in esecuzione su un host. Se SnapDrive per Windows non è installato sull'host, l'API non funziona e la cache interna di SnapManager per Hyper-V non viene aggiornata con le informazioni della macchina virtuale.
+
+Potrebbe essere visualizzato il seguente messaggio: `Error :SnapManager for Hyper-V is not licensed on the host or in the Storage System, backup is aborted:`.

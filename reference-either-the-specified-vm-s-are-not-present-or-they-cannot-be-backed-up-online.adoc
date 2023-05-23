@@ -1,0 +1,69 @@
+---
+permalink: reference-either-the-specified-vm-s-are-not-present-or-they-cannot-be-backed-up-online.html 
+sidebar: sidebar 
+keywords: vm, present, backed, up, online 
+summary: Le VM specificate non sono presenti o non è possibile eseguarne il backup online 
+---
+= Le VM specificate non sono presenti o non è possibile eseguarne il backup online
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Messaggio*
++
+`Either the specified VM(s) are not present or they cannot be backed up online`
+
+* *Descrizione*
++
+Un motivo per cui questo messaggio si verifica quando i backup coerenti con l'applicazione non riescono se la dimensione del disco pass-through sulla macchina virtuale è inferiore a 300 MB. Il registro degli errori sarà simile al seguente esempio:
+
++
+[listing]
+----
+Log Name:      Application
+Source:        SnapMgrServiceHost
+Date:          11/12/2012 12:24:28 PM
+Event ID:      106
+Task Category: Backup Event
+Level:         Error
+Keywords:      Classic
+User:          N/A
+Computer:      defiant16.wak-qa.com
+Description:
+SnapManager for Hyper-V backup failed to complete
+
+Backup Failed for the following VM(s) since it cannot be backedup online or No VM to be found for backup
+               VM Name: demovm-0
+----
++
+Non sono presenti altri messaggi di errore relativi all'applicazione o al sistema per indicare l'errore.
+
+* *Azione correttiva*
++
+È possibile ridimensionare il disco pass-through in modo che sia maggiore di 300 MB oppure eseguire il backup con l'opzione di backup delle macchine virtuali con stato salvato attivata.
+
++
+
+NOTE: Questa azione correttiva è applicabile in ambienti SAN e NAS.
+
+* *Messaggio*
++
+`Either the specified VM(s) are not present or they cannot be backed up online`
+
+* *Descrizione*
++
+Un secondo motivo per cui questo messaggio si verifica è dovuto al fatto che Windows non può eseguire un backup online di questo sistema perché l'opzione di snapshot con ambito per le macchine virtuali Hyper-V è attivata. Gli snapshot con ambito vengono utilizzati principalmente dagli aggiornamenti critici di Windows.
+
+* *Azione correttiva*
++
+È necessario disattivare `scoped snapshots` Creando un DWORD `ScopeSnapshots` parametro con valore 0 in:
+
++
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\SystemRestore\`
+
++
+
+NOTE: Questa azione correttiva è applicabile in ambienti SAN e NAS.
+
+

@@ -1,0 +1,14 @@
+---
+permalink: concept-perform-disaster-recovery.html 
+sidebar: sidebar 
+keywords: disaster, recovery, feature, ensure, disaster, circumstance, critical, protect, data, primary, storage, powershell, perform 
+summary: 'La funzione di disaster recovery garantisce che, se un disastro o altre circostanze rendono indisponibili i dati critici protetti nei siti di storage primario, sia possibile fornire l"accesso alla copia di backup di tali dati attraverso i siti di storage secondari. Il disaster recovery può essere eseguito solo utilizzando l"interfaccia PowerShell.' 
+---
+= Eseguire il disaster recovery
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+La funzione di disaster recovery garantisce che, se un disastro o altre circostanze rendono indisponibili i dati critici protetti nei siti di storage primario, sia possibile fornire l'accesso alla copia di backup di tali dati attraverso i siti di storage secondari. Il disaster recovery può essere eseguito solo utilizzando l'interfaccia PowerShell.

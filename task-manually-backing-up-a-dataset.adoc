@@ -1,0 +1,40 @@
+---
+permalink: task-manually-backing-up-a-dataset.html 
+sidebar: sidebar 
+keywords: create, on-demand, backup, dataset, back, up, manual 
+summary: È possibile creare un backup on-demand di un dataset. 
+---
+= Backup manuale di un set di dati
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile creare un backup on-demand di un dataset.
+
+.Di cosa hai bisogno
+È necessario disporre delle seguenti informazioni:
+
+* Nome e descrizione del backup
+* Nome della policy, se necessario
+* Informazioni sull'override del criterio (se si intende modificare una delle opzioni del criterio precedentemente specificate)
+* Tipo di backup
+* Informazioni sulle opzioni di backup
+
+
+.Fasi
+. Dal riquadro di navigazione, fare clic su menu:protezione[dataset].
+. Selezionare il set di dati per il quale si desidera creare un backup manuale e fare clic su *Backup*.
++
+Viene visualizzata la *procedura guidata di backup*.
+
+. Completare i passaggi della procedura guidata per creare il backup on-demand.
++
+La chiusura della procedura guidata non annulla il backup on-demand.
+
+
+
+.Risultati
+È possibile visualizzare lo stato del backup on-demand nella finestra Gestione processi.

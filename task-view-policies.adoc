@@ -1,0 +1,24 @@
+---
+permalink: task-view-policies.html 
+sidebar: sidebar 
+keywords: view, policy, detail, associate, specific, dataset, policies 
+summary: È possibile visualizzare i dettagli dei criteri associati a un set di dati specifico. 
+---
+= Visualizzare le policy
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile visualizzare i dettagli dei criteri associati a un set di dati specifico.
+
+.Fasi
+. Dal riquadro di navigazione, fare clic su menu:protezione[dataset].
+. Selezionare il set di dati che contiene i criteri che si desidera visualizzare.
+. Dal riquadro Policy (Criteri), selezionare il criterio specifico per il quale si desidera visualizzare i dettagli.
++
+Le informazioni relative al criterio vengono visualizzate nel riquadro Dettagli.
+
+

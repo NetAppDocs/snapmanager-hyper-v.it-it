@@ -1,0 +1,23 @@
+---
+permalink: concept-how-snapmanager-for-hyper-v-uses-vss.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, integration, microsoft, hyper-v, volume, shadow, copy, service, vss, quiesce, virtual, machine, vm, snapshot 
+summary: 'SnapManager per Hyper-V offre l"integrazione con il writer del servizio di copia shadow del volume Microsoft Hyper-V per interrompere una macchina virtuale prima di creare una copia Snapshot coerente con l"applicazione della macchina virtuale.' 
+---
+= Utilizzo di VSS da parte di SnapManager per Hyper-V.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapManager per Hyper-V offre l'integrazione con il writer del servizio di copia shadow del volume Microsoft Hyper-V per interrompere una macchina virtuale prima di creare una copia Snapshot coerente con l'applicazione della macchina virtuale.
+
+SnapManager per Hyper-V è un richiedente VSS e coordina l'operazione di backup per creare una copia Snapshot coerente, utilizzando il provider hardware VSS per Data ONTAP per macchine virtuali Hyper-V in esecuzione su SAN e il provider VSS remoto per macchine virtuali Hyper-V in esecuzione su una condivisione SMB 3.0.
+
+SnapManager per Hyper-V consente di eseguire backup coerenti con l'applicazione di una macchina virtuale, se si dispone di Microsoft Exchange, Microsoft SQL o qualsiasi altra applicazione compatibile con VSS in esecuzione su dischi rigidi virtuali (VHD) nella macchina virtuale. SnapManager per Hyper-V si coordina con gli application writer all'interno della macchina virtuale per garantire la coerenza dei dati delle applicazioni quando si verifica il backup.
+
+È inoltre possibile ripristinare una macchina virtuale da un backup coerente con l'applicazione. Le applicazioni presenti nella macchina virtuale vengono ripristinate nello stesso stato in cui si trovava al momento del backup. SnapManager per Hyper-V ripristina la VM nella posizione originale.
+
+
+NOTE: L'integrazione di VSS è disponibile solo con backup coerenti con l'applicazione. I backup coerenti con il crash non utilizzano VSS.

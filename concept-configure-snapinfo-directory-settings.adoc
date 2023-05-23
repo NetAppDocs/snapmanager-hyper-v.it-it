@@ -1,0 +1,22 @@
+---
+permalink: concept-configure-snapinfo-directory-settings.html 
+sidebar: sidebar 
+keywords: configure, configuring, snapinfo, setting, host, virtual, machine, resource, dataset, action, directory 
+summary: 'È necessario configurare le impostazioni SnapInfo per un host prima di poter aggiungere le risorse della macchina virtuale all"interno di tale host a un dataset.' 
+---
+= Configurare le impostazioni della directory SnapInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È necessario configurare le impostazioni SnapInfo per un host prima di poter aggiungere le risorse della macchina virtuale all'interno di tale host a un dataset. Se le impostazioni SnapInfo non sono configurate quando si aggiunge un host Hyper-V a SnapManager per Hyper-V, è possibile configurarle in un secondo momento, utilizzando la Configurazione guidata o l'azione *Impostazioni SnapInfo*.
+
+È inoltre possibile modificare le impostazioni di SnapInfo dopo aver aggiunto l'host a SnapManager per Hyper-V. Tuttavia, se si modificano le impostazioni di SnapInfo, è necessario spostare manualmente tutti i file nella nuova posizione; SnapManager per Hyper-V non li aggiorna automaticamente. Se non si spostano i file, non è possibile eseguire il ripristino o gestire la copia di backup e SnapManager per Hyper-V non elenca la copia di backup.
+
+A partire da SnapManager per Hyper-V, il percorso SnapInfo può risiedere su volumi condivisi cluster (CSV) e può risiedere anche su condivisioni SMB per Windows Server 2012.
+
+*Informazioni correlate*
+
+http://technet.microsoft.com/library/jj612868.aspx["Microsoft TechNet: Utilizzo di volumi condivisi in cluster in un cluster di failover"]

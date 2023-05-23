@@ -1,0 +1,31 @@
+---
+permalink: reference-backup-fails-after-removing-virtual-machine-from-hyper-v-manager.html 
+sidebar: sidebar 
+keywords: backup, fail, remove, virtual, machine, hyper-v, manager 
+summary: Il backup non riesce dopo la rimozione di una macchina virtuale da Hyper-V Manager. 
+---
+= Il backup non riesce dopo la rimozione di una macchina virtuale da Hyper-V Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Problema*
++
+Dopo aver rimosso una macchina virtuale Hyper-V da Hyper-V Manager, le operazioni di backup non vengono eseguite se non si aggiorna il set di dati associato alla macchina virtuale.
+
+* *Causa*
++
+Questo problema si verifica quando si rimuove una macchina virtuale Hyper-V da Hyper-V Manager e si tenta di eseguire un backup senza modificare il dataset. Inoltre, se si crea nuovamente una macchina virtuale, è necessario modificare il dataset. SnapManager per Hyper-V crea set di dati in base all'ID della macchina virtuale (GUID). Il backup non riesce quando una macchina virtuale viene eliminata, rimossa o ricreata, creando un nuovo GUID. Anche se questo non causa il guasto dell'intero processo di backup, se una macchina virtuale viene eliminata e quindi ricreata con lo stesso nome, non viene automaticamente protetta da SnapManager per Hyper-V.
+
+* *Azione correttiva*
++
+Rimuovere la macchina virtuale dall'elenco di set di dati delle macchine virtuali e aggiungere eventuali macchine virtuali ricreate al set di dati.
+
+
+
+*Informazioni correlate*
+
+xref:concept-configure-datasets.adoc[Configurare i set di dati]
+
+xref:task-modify-a-dataset.adoc[Modificare un dataset]

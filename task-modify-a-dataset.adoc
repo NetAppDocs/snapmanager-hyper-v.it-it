@@ -1,0 +1,25 @@
+---
+permalink: task-modify-a-dataset.html 
+sidebar: sidebar 
+keywords: create, dataset, modify, description, resource, associate 
+summary: Dopo aver creato un dataset, è possibile modificare la descrizione del dataset e le risorse associate al dataset. 
+---
+= Modificare un dataset
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dopo aver creato un dataset, è possibile modificare la descrizione del dataset e le risorse associate al dataset.
+
+.A proposito di questa attività
+La casella di controllo Validate Dataset (convalida dataset) è selezionata per impostazione predefinita. SnapManager per Hyper-V verifica la presenza di eventuali errori di configurazione in tutte le macchine virtuali durante la creazione o la modifica di un dataset. Se non si desidera attivare la convalida del dataset, assicurarsi che la casella di controllo non sia selezionata.
+
+.Fasi
+. Dal riquadro di navigazione, fare clic su menu:protezione[dataset].
+. Selezionare il dataset che si desidera modificare.
+. Dal riquadro delle azioni, fare clic su *Modify dataset* (Modifica dataset).
+. Completare i passaggi della procedura guidata.
+

@@ -1,0 +1,25 @@
+---
+permalink: reference-storage-performance-degrades-after-failed-backup.html 
+sidebar: sidebar 
+keywords: storage, performance, degrade, fail, backup 
+summary: Le performance dello storage si degradano dopo un backup non riuscito. 
+---
+= Le performance dello storage si degradano dopo un backup non riuscito
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Problema*
++
+Le performance dello storage potrebbero peggiorare a seguito di un processo di backup non riuscito.
+
+* *Causa*
++
+Se i componenti di Microsoft Hyper-V VSS riscontrano un'eccezione durante un backup, i volumi condivisi del cluster (CSV) potrebbero rimanere in modalità i/o reindirizzati, causando un overhead di i/o e potenziali colli di bottiglia all'interno del cluster di failover di Windows. Questo può causare un peggioramento generale delle performance, con il maggiore impatto per le macchine virtuali che risiedono sul CSV in modalità i/o reindirizzato.
+
+* *Azione correttiva*
++
+Per assistenza su questo problema, contattare il supporto Microsoft.
+
+

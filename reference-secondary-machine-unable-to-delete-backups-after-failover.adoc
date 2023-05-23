@@ -1,0 +1,25 @@
+---
+permalink: reference-secondary-machine-unable-to-delete-backups-after-failover.html 
+sidebar: sidebar 
+keywords: deleting, delete, backup, failover 
+summary: Eliminazione dei backup dopo il failover. 
+---
+= Eliminare i backup dopo il failover
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Messaggio*
++
+`The specified backup does not exist for some of the objects in the dataset.`
+
+* *Descrizione*
++
+Dopo il failover su un sito secondario (sito B), potrebbe non essere possibile eliminare i backup creati nel sito primario (sito A). Se ci si trova in un sito di disaster recovery (sito B) e si tenta di eliminare i backup eseguiti nel sito primario (sito A), si elimineranno i backup dal sito primario (sito A) piuttosto che dal sito di disaster recovery (sito B).
+
+* *Azione correttiva*
++
+Dopo aver eseguito le operazioni di disaster recovery, eliminare solo i backup eseguiti nel sito operativo corrente.
+
+

@@ -1,0 +1,71 @@
+---
+permalink: reference-requirements-for-restoring-a-virtual-machine.html 
+sidebar: sidebar 
+keywords: restore, virtual, machine, backup, copy, requirement 
+summary: Per ripristinare una macchina virtuale da una copia di backup, è necessario prima determinare come si desidera ripristinare la copia di backup. 
+---
+= Requisiti per il ripristino di una macchina virtuale
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Per ripristinare una macchina virtuale da una copia di backup, è necessario prima determinare come si desidera ripristinare la copia di backup.
+
+
+
+== Nome della copia di backup della macchina virtuale
+
+È necessario decidere quale copia di backup ripristinare.
+
+Tutte le copie di backup sono elencate in base al nome nel pannello Backup della finestra Recovery Management.
+
+
+
+== Tipo di copia di backup della macchina virtuale
+
+Il ripristino di una macchina virtuale da un backup coerente con l'applicazione viene eseguito in coordinamento con VSS. Il writer VSS di Hyper-V elimina la macchina virtuale prima del ripristino e la registra in Hyper-V Manager al termine dell'operazione di ripristino.
+
+Il ripristino di una macchina virtuale da un backup coerente con il crash non implica VSS. La macchina virtuale viene spenta prima dell'operazione di ripristino. Quando si esegue il ripristino da un backup coerente con il crash, la macchina virtuale deve esistere; il ripristino di una macchina virtuale eliminata da un backup coerente con il crash non riesce.
+
+
+
+== Stato della copia di backup della macchina virtuale
+
+È necessario determinare se la macchina virtuale esiste ancora.
+
+Se la macchina virtuale non esiste più, è comunque possibile ripristinarla se i LUN su cui è stata creata la macchina virtuale sono ancora presenti. I LUN devono avere le stesse lettere di unità e gli stessi GUID dei volumi Windows al momento del backup.
+
+Se si elimina una macchina virtuale in Windows Server 2008 R2, è possibile ripristinare la macchina virtuale da un backup coerente con l'applicazione, ma in Windows Server 2012 e Windows Server 2012 R2, è possibile ripristinare una macchina virtuale eliminata da un backup coerente con l'applicazione e un crash.
+
+Se la macchina virtuale è stata rimossa da tutti i set di dati prima dell'eliminazione, è comunque possibile ripristinarla selezionando risorse non protette e selezionando un backup a cui apparteneva.
+
+
+
+== Stato di configurazione della copia di backup della macchina virtuale
+
+È necessario determinare se la configurazione della macchina virtuale è la stessa utilizzata al momento del backup.
+
+Se la configurazione corrente della macchina virtuale è diversa da quella al momento del backup, SnapManager per Hyper-V notifica all'utente che il layout della macchina virtuale è stato modificato e chiede se si desidera ripristinare la configurazione e i dati della macchina virtuale così come erano presenti nel backup.
+
+
+NOTE: Poiché SnapManager per Hyper-V non esegue il backup della configurazione del cluster della macchina virtuale, non è in grado di ripristinare la configurazione del cluster. In caso di perdita della configurazione della macchina virtuale e del cluster, è possibile ripristinare la macchina virtuale da SnapManager per Hyper-V, ma è necessario renderla disponibile manualmente.
+
+Se la macchina virtuale è configurata in modo diverso dalla configurazione corrente della macchina virtuale nel backup, potrebbe essere necessario aggiornare la configurazione del cluster per riflettere eventuali dischi rigidi virtuali (VHD) aggiunti o rimossi.
+
+
+
+== Stato della copia Snapshot
+
+Prima di tentare l'operazione di ripristino, è possibile verificare che le copie Snapshot di backup esistano nel sistema di storage.
+
+
+
+== Riavviare la macchina virtuale
+
+È possibile scegliere di avviare la macchina virtuale dopo il ripristino.
+
+*Informazioni correlate*
+
+http://technet.microsoft.com/library/ff182338(v=WS.10).aspx["Microsoft TechNet: Cluster di failover in Windows Server 2008 R2"]

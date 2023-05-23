@@ -1,0 +1,25 @@
+---
+permalink: task-delete-policies.html 
+sidebar: sidebar 
+keywords: delete, policy, policies, deleting, dataset 
+summary: È possibile eliminare un criterio da un dataset quando non è più necessario. 
+---
+= Eliminare i criteri
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile eliminare un criterio da un dataset quando non è più necessario.
+
+.Fasi
+. Dal riquadro di navigazione, fare clic su menu:protezione[dataset].
+. Selezionare il dataset che contiene il criterio che si desidera eliminare.
+. Dal riquadro Policy (Criteri), selezionare il criterio specifico che si desidera eliminare.
+. Dal riquadro delle azioni, fare clic su *Rimuovi* e fare clic su *OK* per eliminare il criterio.
++
+L'eliminazione del criterio elimina anche i processi pianificati da tutti gli host che sono membri del dataset.
+
+

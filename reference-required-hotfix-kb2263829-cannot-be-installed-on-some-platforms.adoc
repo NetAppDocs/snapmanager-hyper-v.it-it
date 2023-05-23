@@ -1,0 +1,25 @@
+---
+permalink: reference-required-hotfix-kb2263829-cannot-be-installed-on-some-platforms.html 
+sidebar: sidebar 
+keywords: require, hotfix, kb2263829, install, platform 
+summary: La correzione rapida richiesta KB2263829 non può essere installata su alcune piattaforme. 
+---
+= La correzione rapida richiesta KB2263829 non può essere installata su alcune piattaforme
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Problema*
++
+Durante l'installazione di SnapManager per Hyper-V, il tentativo di installare la correzione rapida KB2263829 potrebbe non riuscire per Windows Server 2008 R2 SP1. Il programma di installazione dichiara che la correzione rapida non è applicabile a questo server.
+
+* *Causa*
++
+La correzione rapida non è supportata per la piattaforma in uso.
+
+* *Azione correttiva*
++
+Aprire un caso di supporto con Microsoft e risolvere il problema con Microsoft.
+
+

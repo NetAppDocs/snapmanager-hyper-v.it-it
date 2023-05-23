@@ -1,0 +1,43 @@
+---
+permalink: task-view-a-report.html 
+sidebar: sidebar 
+keywords: view, report, dataset, virtual, machine, resource, manage, snapmanager, hyper-v 
+summary: È possibile visualizzare un report su un set di dati o una risorsa di macchina virtuale gestita in SnapManager per Hyper-V. 
+---
+= Visualizzare un report del dataset
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile visualizzare un report su un set di dati o una risorsa di macchina virtuale gestita in SnapManager per Hyper-V.
+
+.Fasi
+. Dal riquadro di navigazione, fare clic su menu:Report[dataset].
+. Selezionare il set di dati o la macchina virtuale che contiene il report che si desidera visualizzare.
+. Dal riquadro dei report, fare clic sulla scheda Backup o Recovery.
+. Selezionare il report che si desidera visualizzare e fare clic su *Visualizza report*.
++
+|===
+| Se si desidera visualizzare un... | Quindi... 
+
+
+ a| 
+*report del dataset*
+ a| 
+È possibile visualizzare un report di backup.
+
+
+
+ a| 
+*report macchina virtuale*
+ a| 
+È possibile visualizzare un report di backup o ripristino.
+
+|===
++
+Il report viene visualizzato in una finestra separata.
+
+

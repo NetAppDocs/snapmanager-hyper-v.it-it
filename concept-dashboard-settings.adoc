@@ -1,0 +1,45 @@
+---
+permalink: concept-dashboard-settings.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, dashboard, overview, resource, protect, job, resource, history, setting 
+summary: 'La dashboard di SnapManager per Hyper-V visualizza una panoramica delle risorse attualmente protette e di quelle non protette. È possibile selezionare diversi segmenti del grafico a torta VM Protection Status (Stato protezione macchina virtuale) o del grafico a barre Job History (Cronologia lavori) per visualizzare informazioni generali sullo stato dei lavori, delle risorse e della cronologia.' 
+---
+= Impostazioni della dashboard
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+La dashboard di SnapManager per Hyper-V visualizza una panoramica delle risorse attualmente protette e di quelle non protette. È possibile selezionare diversi segmenti del grafico a torta VM Protection Status (Stato protezione macchina virtuale) o del grafico a barre Job History (Cronologia lavori) per visualizzare informazioni generali sullo stato dei lavori, delle risorse e della cronologia.
+
+image::smhv_dashboard.gif[dashboard smhv]
+
+* *VM Protection status*
++
+Quando si seleziona un segmento nel grafico a torta VM Protection Status (Stato protezione macchina virtuale), è possibile visualizzare le informazioni sullo stato di protezione delle macchine virtuali nel riquadro Details (Dettagli). Le descrizioni dei valori validi sono le seguenti:
+
++
+** *OK*
++
+Visualizza il backup riuscito più recente di tutte le macchine virtuali.
+
+** *Non riuscito*
++
+Visualizza l'ultimo backup non riuscito di ciascuna macchina virtuale.
+
+** *Non protetto*
++
+Visualizza le macchine virtuali che non appartengono ad alcun set di dati e che pertanto non sono protette.
+
+
+
+* *Cronologia lavori*
++
+Quando si seleziona un segmento nel grafico a barre Cronologia lavori, nel riquadro Dettagli è possibile visualizzare la cronologia dei lavori completati, non riusciti ed in esecuzione in un determinato periodo di tempo. È possibile modificare il periodo di tempo in cui i dettagli del lavoro vengono visualizzati nel grafico a barre della cronologia del lavoro. Il valore predefinito è sette giorni.
+
+* *Configurare l'aggiornamento*
++
+È possibile modificare la frequenza con cui la dashboard aggiorna le informazioni visualizzate utilizzando il pulsante *Configure refresh* (Configura aggiornamento). Il valore predefinito è 10 minuti.
+
+

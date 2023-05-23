@@ -1,0 +1,46 @@
+---
+permalink: concept-overview-of-vss-components.html 
+sidebar: sidebar 
+keywords: microsoft, windows, server, volume, shadow, copy, service, vss, coordinate, data, backup, application, storage, management, consisten, backup 
+summary: 'È possibile utilizzare Microsoft Windows Server Volume Shadow Copy Service (VSS) per coordinare server di dati, applicazioni di backup e software di gestione dello storage per supportare la creazione e la gestione di backup coerenti.' 
+---
+= Componenti VSS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile utilizzare Microsoft Windows Server Volume Shadow Copy Service (VSS) per coordinare server di dati, applicazioni di backup e software di gestione dello storage per supportare la creazione e la gestione di backup coerenti.
+
+VSS coordina le operazioni di backup e ripristino basate su copia Snapshot e include i seguenti componenti:
+
+* *Richiedente VSS*
++
+Il richiedente VSS è un'applicazione di backup, ad esempio SnapManager per Hyper-V o NTBackup. Avvia le operazioni di backup e ripristino del VSS. Il richiedente specifica anche gli attributi di copia Snapshot per i backup che avvia.
+
+* *Writer VSS*
++
+Il writer VSS possiede e gestisce i dati da acquisire nella copia Snapshot. Microsoft Hyper-V VSS Writer è un esempio di writer VSS.
+
+* *Provider VSS*
++
+Il provider VSS è responsabile della creazione e della gestione della copia Snapshot. Un provider può essere un provider di hardware o un provider di software:
+
++
+** Un provider di hardware integra le funzionalità di copia Snapshot e cloning specifiche degli array di storage nel framework VSS.
++
+Il provider hardware VSS di ONTAP integra il servizio SnapDrive e i sistemi storage che eseguono Data ONTAP nel framework VSS.
+
++
+
+NOTE: Il provider hardware VSS di ONTAP viene installato automaticamente durante l'installazione del software SnapDrive.
+
+** Un provider di software implementa la funzionalità di copia o clonazione Snapshot nel software in esecuzione sul sistema Windows.
++
+
+NOTE: Per garantire il corretto funzionamento del provider hardware VSS di ONTAP, non utilizzare il provider software VSS su LUN Data ONTAP. Se si utilizza il provider software VSS per creare copie Snapshot su un LUN Data ONTAP, non è possibile eliminare tale LUN utilizzando il provider hardware VSS.
+
+
+
+

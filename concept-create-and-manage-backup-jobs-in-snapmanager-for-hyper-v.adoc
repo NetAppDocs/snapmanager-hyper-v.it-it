@@ -1,0 +1,54 @@
+---
+permalink: concept-create-and-manage-backup-jobs-in-snapmanager-for-hyper-v.html 
+sidebar: sidebar 
+keywords: create, monitor, on-demand, backup, manage, schedule, snapmanager, hyper-v, creating, managing, application, crash 
+summary: È possibile creare e monitorare backup on-demand o backup pianificati gestiti in SnapManager per Hyper-V. 
+---
+= Creare e gestire i processi di backup in SnapManager per Hyper-V.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile creare e monitorare backup on-demand o backup pianificati gestiti in SnapManager per Hyper-V. Con SnapManager per Hyper-V è inoltre possibile eseguire due tipi di processi di backup: Coerente con l'applicazione e coerente con il crash.
+
+
+
+== Informazioni su SnapManager per i backup Hyper-V.
+
+È possibile creare processi di backup on-demand ed eseguirli quando si desidera oppure creare processi di backup pianificati utilizzando policy collegate ai set di dati. Un processo di backup on-demand può includere policy di conservazione e replica, nonché script da eseguire prima e dopo il backup. È possibile creare, modificare, visualizzare ed eliminare i criteri che compongono i processi di backup pianificati.
+
+
+
+== Tipi di processi di backup che possono essere eseguiti da SnapManager per Hyper-V.
+
+Con SnapManager per Hyper-V è possibile eseguire due tipi di processi di backup: Coerente con l'applicazione e coerente con il crash.
+
+
+
+== Processi di backup coerenti con l'applicazione
+
+I processi di backup coerenti con l'applicazione sono completi, affidabili e richiedono un uso intensivo di risorse. Vengono eseguite in collaborazione con Microsoft Volume Shadow Copy Service (VSS) per garantire che ogni applicazione in esecuzione sulla macchina virtuale venga sospesa prima di creare una copia Snapshot. Questo metodo di backup garantisce la coerenza dei dati delle applicazioni. È possibile utilizzarlo per ripristinare le macchine virtuali e le applicazioni in esecuzione su di esse. Tuttavia, i processi di backup coerenti con l'applicazione richiedono tempo e possono essere complessi.
+
+
+
+== Processi di backup coerenti con il crash
+
+I processi di backup coerenti con il crash sono copie Snapshot rapide di tutte le LUN utilizzate dalle macchine virtuali coinvolte in un set di dati. Le copie di backup risultanti sono simili alle acquisizioni di dati delle macchine virtuali che si trovano in crash o che vengono altrimenti spente bruscamente. I processi di backup coerenti con il crash offrono un modo rapido per acquisire i dati, ma le macchine virtuali devono essere presenti per essere ripristinate da un backup coerente con il crash. I processi di backup coerenti con il crash non sono destinati a sostituire i processi di backup coerenti con l'applicazione.
+
+
+
+== Requisiti e limitazioni del backup di SnapManager per Hyper-V.
+
+È necessario conoscere i requisiti e le limitazioni di un backup SnapManager per Hyper-V:
+
+* Le operazioni di backup e ripristino non sono supportate se si esegue un'operazione di switchover o switchback su una configurazione MetroCluster. Se un'operazione di backup e ripristino e un'operazione di switchover o switchback sono in esecuzione contemporaneamente, l' `.vhd` Il formato del file di una macchina virtuale potrebbe cambiare in `.avhdx` Nei sistemi Windows Server 2012 R2. La macchina virtuale non è interessata da questa modifica.
+* Il `distributed application-consistent backup` L'opzione consente a più macchine virtuali in esecuzione sui nodi del cluster partner di essere coerenti in una singola copia Snapshot hardware creata dal nodo di backup. Questa opzione è supportata per tutte le macchine virtuali in esecuzione su un volume Windows CSV 2.0 su più nodi in un cluster di failover di Windows.
+* Durante il funzionamento in 7-Mode, i processi di backup coerenti con l'applicazione utilizzano il provider hardware VSS per eseguire due copie Snapshot. Vengono chiamate le copie Snapshot `snapshot_name` e. `snapshot_name_backup`. Le due copie Snapshot vengono create per facilitare il ripristino automatico durante il backup VSS.
+* Negli ambienti in cluster, i backup coerenti con le applicazioni richiedono una sola copia Snapshot per il processo di recovery automatico. I cloni SIS vengono sfruttati per eseguire il recovery automatico e, una volta completato il recovery automatico, la prima copia Snapshot (`snapshot_name`) viene cancellato.
+* Ogni volume Windows nella macchina virtuale deve disporre di almeno 300 MB di spazio libero su disco. Sono inclusi i volumi Windows corrispondenti a VHD, LUN iSCSI e dischi pass-through collegati alla macchina virtuale.
+* Un processo di backup coerente con il crash crea sempre una sola copia Snapshot. Non fornisce l'integrazione VSS.
+* È possibile eseguire più processi di backup coerenti con il crash in parallelo. Un processo di backup coerente con il crash può essere eseguito in parallelo con un processo di backup coerente con l'applicazione.
+* `Allow Saved State Backup` non è applicabile a processi di backup coerenti con il crash.
+

@@ -1,0 +1,20 @@
+---
+permalink: task-view-a-dataset.html 
+sidebar: sidebar 
+keywords: view, virtual, machine, associate, dataset 
+summary: È possibile visualizzare le macchine virtuali associate a un set di dati. 
+---
+= Visualizzare un set di dati
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile visualizzare le macchine virtuali associate a un set di dati.
+
+.Fasi
+. Dal riquadro di navigazione, fare clic su menu:protezione[dataset].
+. Espandere la vista ad albero per esaminare le macchine virtuali che appartengono al dataset.
+

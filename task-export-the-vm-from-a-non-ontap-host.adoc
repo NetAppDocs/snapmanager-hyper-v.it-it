@@ -1,0 +1,40 @@
+---
+permalink: task-export-the-vm-from-a-non-ontap-host.html 
+sidebar: sidebar 
+keywords: export, virtual, machine, vm, non-ontap, host, import 
+summary: Prima di poter importare una macchina virtuale in un host ONTAP, è necessario esportare una macchina virtuale da un host non ONTAP. 
+---
+= Esportare la macchina virtuale da un host non ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Prima di poter importare una macchina virtuale in un host ONTAP, è necessario esportare una macchina virtuale (VM) da un host non ONTAP.
+
+La macchina virtuale che si desidera migrare deve essere spenta.
+
+. Aprire l'applicazione Server Manager.
+. Nel riquadro di sinistra, fare clic su *Roles* > *Hyper-V* > *Hyper-V Manager*.
+. Selezionare il nome dell'host non ONTAP su cui risiede la macchina virtuale che si desidera migrare.
+. Dal riquadro Virtual Machines (macchine virtuali), fare clic con il pulsante destro del mouse sul nome della macchina virtuale che si desidera migrare.
+. Fare clic su *Esporta*.
++
+image::../media/smhv_export_vm_in_servermanager.gif[esportazione di macchine virtuali smhv in servermanager]
+
++
+Viene visualizzata la finestra Export Virtual Machine (Esporta macchina virtuale).
+
+. Fare clic su *Sfoglia*.
++
+Viene visualizzata una finestra che mostra i dischi rigidi disponibili.
+
+. Fare clic sulla destinazione host ONTAP per la macchina virtuale.
+. Fare clic su *Select Folder* (Seleziona cartella).
++
+La macchina virtuale viene esportata nella destinazione Data ONTAP scelta al punto 7.
+
+
+
+Quindi, importare la macchina virtuale nell'host Data ONTAP scelto.

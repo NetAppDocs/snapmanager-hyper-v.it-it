@@ -1,0 +1,37 @@
+---
+permalink: reference-web-service-client-channel-unable-to-connect-while-updating-the-dataset-to-the-new-node.html 
+sidebar: sidebar 
+keywords: web, service, client, channel, unable, connect, update, updating, dataset, new, node 
+summary: 'Il canale Web Service Client non riesce a connettersi durante l"aggiornamento del dataset al nuovo nodo.' 
+---
+= Il canale Web Service Client non riesce a connettersi durante l'aggiornamento del dataset al nuovo nodo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Problema*
++
+Se un client dei servizi Web non viene avviato esplicitamente, non sarà possibile connettersi a SnapManager per Hyper-V.
+
+* *Causa*
++
+SnapManager per Hyper-V non avvia più automaticamente un canale client di servizi Web. Se il canale Web Service Client non è in grado di connettersi durante l'aggiornamento di un dataset a un nuovo nodo, potrebbe essere per uno dei seguenti motivi:
+
++
+** I servizi Web non sono stati avviati.
+** SnapManager per Hyper-V non è installato.
+** L'host dei servizi Web non è attivo.
+
+
+* *Azione correttiva*
++
+Per correggere questo comportamento, assicurarsi di aver eseguito le seguenti operazioni:
+
++
+** Avviare i servizi Web.
+** Installare SnapManager per Hyper-V.
+** Riavviare l'host dei servizi Web.
+
+
+

@@ -1,0 +1,37 @@
+---
+permalink: concept-report-management.html 
+sidebar: sidebar 
+keywords: view, delete, backup, restore, configuration, report, snapmanager, hyper-v, information, virtual, machine, vm, managing, manage 
+summary: È possibile visualizzare ed eliminare i report di backup, ripristino e configurazione in SnapManager per Hyper-V. Questi report contengono informazioni importanti sui set di dati, sulle macchine virtuali e sugli host. È inoltre possibile esportare i report in diversi formati. 
+---
+= Gestire i report
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile visualizzare ed eliminare i report di backup, ripristino e configurazione in SnapManager per Hyper-V. Questi report contengono informazioni importanti sui set di dati, sulle macchine virtuali e sugli host. È inoltre possibile esportare i report in diversi formati.
+
+* *Report di backup*
++
+I report di backup visualizzano tutte le informazioni di backup per tutti gli host appartenenti a un determinato dataset. È possibile visualizzare un report di backup per un set di dati o una macchina virtuale. I report visualizzati per una macchina virtuale utilizzano il nome della macchina virtuale invece del GUID.
+
++
+Quando viene visualizzato il report di backup, è possibile esportarlo in diversi formati.
+
+* *Ripristina report*
++
+I report di ripristino visualizzano tutte le informazioni sull'operazione di ripristino per macchina virtuale.
+
++
+Quando viene visualizzato il report di ripristino, è possibile esportarlo in diversi formati.
+
+* *Rapporti di configurazione*
++
+I report di configurazione visualizzano le impostazioni di notifica, il percorso del report e il percorso SnapInfo per l'host selezionato.
+
++
+Quando viene visualizzato il report di configurazione, è possibile esportarlo in diversi formati.
+
+

@@ -1,0 +1,56 @@
+---
+permalink: reference-requirements-for-remote-host-install.html 
+sidebar: sidebar 
+keywords: remote, host, install, wizard, snapmanager, hyper-v, host, node, require, detail, requirement 
+summary: 'Prima di utilizzare l"installazione guidata dell"host remoto per installare SnapManager per Hyper-V in remoto su un host o un nodo, è necessario acquisire alcuni dettagli dell"host necessari.' 
+---
+= Requisiti per l'utilizzo dell'Installazione guidata host remoto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Prima di utilizzare l'installazione guidata dell'host remoto per installare SnapManager per Hyper-V in remoto su un host o un nodo, è necessario acquisire alcuni dettagli dell'host necessari.
+
+È possibile accedere alla procedura guidata Installazione host remoto dal riquadro Actions (azioni) della finestra Protection (protezione). Consente di installare o disinstallare in remoto SnapManager per Hyper-V su nodi o host standalone e cluster.
+
+Se si aggiunge un host che non dispone di SnapManager per Hyper-V, la procedura guidata Aggiungi host richiede di installarlo sull'host.
+
+* *Installare o disinstallare*
++
+È necessario scegliere se utilizzare la procedura guidata per installare o disinstallare in remoto SnapManager per Hyper-V su host o nodi.
+
+* *Per server o per storage*
++
+È necessario scegliere se installare SnapManager per Hyper-V per server o per storage.
+
+* *Nome host/IP*
++
+Specificare il nome o l'indirizzo IP dell'host su cui si desidera installare SnapManager per Hyper-V. Selezionare *Browse...* per cercare l'host o il nodo.
+
+* *Porta*
++
+Per connettersi all'host o al nodo, è necessario specificare il numero della porta.
+
+* *Chiave di licenza SMHV*
++
+È necessario fornire la chiave di licenza SnapManager per Hyper-V.
+
+* *Chiave di licenza SDW*
++
+È necessario fornire il codice di licenza SnapDrive per Windows.
+
+* *Nome utente*
++
+Specificare il nome utente a livello di amministratore del nodo o dell'host utilizzando il formato _dominio/nome utente_.
+
+* *Password*
++
+Immettere la password dell'host o del nodo.
+
+* *Conferma password*
++
+Immettere nuovamente la password dell'host o del nodo per la conferma.
+
+

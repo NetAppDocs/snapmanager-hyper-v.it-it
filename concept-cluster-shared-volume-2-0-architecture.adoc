@@ -1,0 +1,31 @@
+---
+permalink: concept-cluster-shared-volume-2-0-architecture.html 
+sidebar: sidebar 
+keywords: windows, server, cluster, shared, volume, csv, backup 
+summary: 'Windows Server 2012 e versioni successive offrono nuove funzionalità per Cluster Shared Volume (CSV) 2.0 che includono un nuovo file system, modifiche al writer CSV, modifiche alla copia shadow CSV e miglioramenti al backup CSV.' 
+---
+= CSV 2.0 in Windows Server 2012 e versioni successive
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Windows Server 2012 e versioni successive offrono nuove funzionalità per Cluster Shared Volume (CSV) 2.0 che includono un nuovo file system, modifiche al writer CSV, modifiche alla copia shadow CSV e miglioramenti al backup CSV.
+
+Windows Server 2012 e versioni successive includono le seguenti modifiche al file CSV 2.0:
+
+* Il file system CSV (CSVFS) è disponibile su tutti i nodi del cluster come nuovo file system distribuito.
+* Il writer CSV serve i metadati a livello di volume e componente dal nodo non richiedente per i volumi CSV e agisce come proxy includendo i writer Hyper-V dal nodo remoto per la sessione di backup.
+* Il provider di copie shadow CSV agisce come provider software predefinito per i volumi CSV e coordina il congelamento VSS e lo scongelamento VSS in tutti i nodi del cluster per garantire la coerenza delle applicazioni e del crash.
++
+Il provider di copie shadow CSV garantisce che un volume CSV Snapshot sia scrivibile sul nodo richiedente.
+
+* CSV ora supporta un volume Snapshot coerente con l'applicazione in tutti i CSV per più macchine virtuali.
++
+Il volume CSV del volume Snapshot viene esposto a tutti i nodi proprietari della macchina virtuale per eseguire la procedura di overing automatico.
+
++
+CSV passa alla modalità i/o reindirizzata solo durante la creazione di Snapshot e non durante il backup.
+
+

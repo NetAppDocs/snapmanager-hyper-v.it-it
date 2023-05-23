@@ -1,0 +1,30 @@
+---
+permalink: reference-restore-failure-after-storage-system-volume-renaming.html 
+sidebar: sidebar 
+keywords: restore, failure, storage, system, volume, renaming, rename 
+summary: Errore di ripristino dopo la ridenominazione del volume del sistema di storage. 
+---
+= Errore di ripristino dopo la ridenominazione del volume del sistema di storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Messaggio*
++
+`Some of the storage system snapshots required to restore the VM are missing or inconsistent.`
+
+* *Descrizione*
++
+Se i volumi del sistema di storage vengono rinominati, non è possibile ripristinare una macchina virtuale (VM) dal backup creato prima di rinominare i volumi.
+
+* *Azione correttiva*
++
+Se i volumi del sistema di storage vengono rinominati ed è necessario ripristinare una macchina virtuale da un backup creato prima di rinominare i volumi, completare quanto segue:
+
++
+** Durante il ripristino di una macchina virtuale da MMC, assicurarsi che l'opzione "Enable Snapshot Verification" (attiva verifica snapshot) sia deselezionata nella pagina *Restore Options* della procedura guidata di ripristino.
+** Durante il ripristino di una macchina virtuale utilizzando PowerShell, assicurarsi che -`DisableVerifySnapshot` parametro specificato.
+
+
+

@@ -1,0 +1,34 @@
+---
+permalink: reference-error-vss-requestor-backup-components-failed.html 
+sidebar: sidebar 
+keywords: error, vss, requestor, backup, component, fail 
+summary: 'Errore: Richiedente VSS - componenti di backup non riusciti.' 
+---
+= Errore: Richiedente VSS - componenti di backup non riusciti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Messaggio*
++
+Il seguente messaggio di errore viene visualizzato nel report SnapManager per Hyper-V e nel registro eventi di Windows: `Error: Vss Requestor - Backup Components failed. Writer Microsoft Hyper-V VSS Writer involved in backup or restore encountered a retryable error. Writer returned failure code 0x800423f3. Writer state is XXX. For more information, see the Hyper-V-VMMS event log in the Windows Event Viewer.`
+
+* *Descrizione*
++
+Se si riceve un errore di ripetizione del VSS che causa un errore del backup coerente con l'applicazione, SnapManager per Hyper-V riprova il backup tre volte con un'attesa di un minuto tra un tentativo e l'altro.
+
+* *Azione correttiva*
++
+È possibile configurare il numero di tentativi (numero di tentativi) e la durata del tempo di attesa tra i tentativi (intervallo di tentativi) utilizzando le seguenti chiavi di registro:
+
++
+`Key: HKLM\System\CurrentControlSet\Services\OnCommandHyperV\Parameters DWORD value in seconds: vss_retry_sleep (The time duration to wait between retries) DWORD value: vss_retry (Number of retries)`
+
++
+Queste impostazioni si trovano a livello di host Hyper-V e le chiavi e i valori devono essere impostati sull'host Hyper-V per ciascuna macchina virtuale. Se la macchina virtuale è in cluster, le chiavi devono essere impostate su ciascun nodo del cluster.
+
++
+È necessario riavviare SnapManager per Hyper-V dopo aver apportato modifiche o aggiunto queste chiavi di registro.
+
+

@@ -1,0 +1,49 @@
+---
+permalink: task-restore-a-virtual-machine-from-a-backup-copy.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, restore, single, virtual, machine, vm, recover, lost, damage, data, backup, copy, restoring 
+summary: 'È possibile utilizzare SnapManager per Hyper-V, che ripristina una singola macchina virtuale (VM) alla volta, per recuperare i dati persi o danneggiati da una copia di backup.' 
+---
+= Ripristinare una macchina virtuale da una copia di backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile utilizzare SnapManager per Hyper-V, che ripristina una singola macchina virtuale (VM) alla volta, per recuperare i dati persi o danneggiati da una copia di backup.
+
+.Di cosa hai bisogno
+È necessario disporre delle seguenti informazioni:
+
+* Nome del backup
+* Informazioni di configurazione
+* Informazioni sullo script
+
+
+Quando si esegue il ripristino su un host alternativo, il tipo di CPU del computer fisico su cui risiede la macchina virtuale originale deve essere compatibile con il computer fisico su cui si desidera ripristinare la macchina virtuale. In alternativa, è possibile utilizzare Hyper-V Manager per specificare che il computer può essere ripristinato su un computer con un tipo di CPU diverso.
+
+.A proposito di questa attività
+Dopo la migrazione live dello storage, non è possibile eseguire il ripristino dall'ultimo backup.
+
+Se si avvia un'operazione di ripristino di una macchina virtuale Hyper-V e un altro backup o ripristino della stessa macchina virtuale è in corso, l'operazione non riesce.
+
+.Fasi
+. Dal riquadro di navigazione, fare clic su *Recovery*.
+. Selezionare la macchina virtuale che si desidera ripristinare.
+. Nel riquadro Backup, selezionare il nome della copia di backup che si desidera ripristinare e fare clic su *Ripristina*.
++
+Viene visualizzata la procedura guidata di ripristino.
+
+. Completare la procedura guidata per ripristinare la copia di backup della macchina virtuale.
++
+La chiusura della procedura guidata non annulla l'operazione di ripristino. SnapManager per Hyper-V convalida la configurazione della macchina virtuale prima di iniziare l'operazione di ripristino. Se sono state apportate modifiche alla configurazione della macchina virtuale, viene visualizzato un avviso che consente di scegliere se continuare o annullare l'operazione.
+
+
+
+.Al termine
+È possibile visualizzare lo stato dell'operazione di ripristino nella finestra *Gestione lavori* o controllare i risultati dell'operazione visualizzando il report nella finestra *Gestione rapporti*.
+
+*Informazioni correlate*
+
+xref:reference-restore-from-a-backup-after-failback.adoc[Eseguire il ripristino da un backup dopo il failback]

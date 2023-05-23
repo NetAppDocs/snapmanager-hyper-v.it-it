@@ -1,0 +1,49 @@
+---
+permalink: concept-snapmanager-for-hyper-v-limitations.html 
+sidebar: sidebar 
+keywords: important, understand, snapmanager, hyper-v, limitation 
+summary: È importante comprendere che alcune funzionalità non sono supportate in SnapManager 2.1 e versioni successive per Hyper-V. 
+---
+= Elenco delle limitazioni di SnapManager per Hyper-V.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È importante comprendere che alcune funzionalità non sono supportate in SnapManager 2.1 e versioni successive per Hyper-V .
+
+* L'annullamento, la sospensione e la ripresa dei processi di backup e ripristino non sono supportati.
+* Le policy non possono essere copiate tra set di dati.
+* RBAC (role-based access control) non supportato.
+* Non è supportata l'esclusione dei dischi rigidi virtuali (VHD) da un processo di backup del servizio di copia shadow del volume (VSS) di SnapManager per Hyper-V.
+* Il ripristino di un singolo file da una copia di backup non è supportato in modo nativo.
+* La gestione tra versioni non è supportata; ad esempio, non è possibile utilizzare la console client 1.2 per gestire SnapManager 2.0 per Hyper-V e viceversa.
+* Se si inizia a ripristinare una macchina virtuale Hyper-V e un altro backup o ripristino della stessa macchina virtuale è in corso, il tentativo non riesce.
+* Il ripristino di una macchina virtuale eliminata da una copia di backup coerente con il crash è supportato solo per Windows Server 2012.
+* L'esecuzione di versioni diverse di SnapManager per Hyper-V su nodi diversi di un cluster di failover non è supportata.
+* Il ripristino da SnapManager 2.1 per Hyper-V non è supportato.
+* I processi di backup o ripristino delle macchine virtuali non sono supportati quando gli utenti modificano il nodo di proprietà del cluster durante il backup o il ripristino.
+* I backup in modalità mista (di macchine virtuali contenenti file su volumi CSV 2.0 e condivisioni SMB) non sono supportati.
+* Dopo aver migrato lo storage di una macchina virtuale in un'altra posizione utilizzando Windows Server 2012, non è possibile eseguire il ripristino su tale macchina virtuale dalle copie di backup effettuate prima della migrazione.
+* Per Windows Server 2012, non è possibile eseguire un processo di backup in cui il set di backup include un volume condiviso cluster (CSV) e un disco condiviso.
+* Durante la configurazione di Manage Storage Connection Settings, non è possibile utilizzare il protocollo RPC (Remote procedure Call); è possibile utilizzare solo i protocolli HTTP e HTTPS.
+* La creazione di un backup coerente con l'applicazione di una macchina virtuale (VM) memorizzata sullo storage NAS non è supportata dal sistema operativo Windows Server 2012 Hyper-V.
++
+Questa limitazione non si applica ai backup coerenti con il crash. Si applica solo al server Hyper-V gratuito, che non include i servizi di copia shadow della condivisione file.
+
+* Il nome dello switch virtuale per una macchina virtuale deve essere esattamente lo stesso per gli host Windows primario e secondario.
+* Le operazioni di backup e ripristino richiedono una licenza FlexClone quando le macchine virtuali Hyper-V vengono implementate su SMB 3.0.
+* La dimensione massima del LUN supportato per le operazioni di ripristino è di 14 TB.
+* I seguenti server Hyper-V non supportano backup delle macchine virtuali coerenti con l'applicazione:
++
+** Microsoft Hyper-V Server 2016 (edizione gratuita)
+** Microsoft Hyper-V Server 2019 (edizione gratuita)
++
+Si noti che questa limitazione non si applica ai backup coerenti con il crash o alle seguenti piattaforme Windows:
+
+** Microsoft Windows Server 2016 Standard e Datacenter Edition
+** Microsoft Windows Server 2019 Standard e Datacenter Edition
+
+
+

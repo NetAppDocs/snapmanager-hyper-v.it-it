@@ -1,0 +1,25 @@
+---
+permalink: reference-backup-reports-use-management-console-time-zone-information-in-report-name.html 
+sidebar: sidebar 
+keywords: backup, report, use, management, console, time, zone, information, report, name 
+summary: I report di backup utilizzano le informazioni sul fuso orario della console di gestione nel nome del report. 
+---
+= I report di backup utilizzano le informazioni sul fuso orario della console di gestione nel nome del report
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Problema*
++
+Quando si genera un report di backup utilizzando un host client che risiede in un fuso orario diverso dall'host principale, il nome del report utilizza le informazioni sul fuso orario dell'host client e il contenuto del report utilizza il fuso orario dell'host principale.
+
+* *Causa*
++
+L'indicazione dell'ora nel nome del report di backup viene visualizzata con le informazioni sul fuso orario dell'host client.
+
+* *Azione correttiva*
++
+Non è necessaria alcuna azione correttiva.
+
+

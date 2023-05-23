@@ -1,0 +1,13 @@
+---
+permalink: index.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, install, configure, operate, installation, configuration, operation 
+summary: Descrive come installare, configurare e utilizzare il software SnapManager per Hyper-V. 
+---
+= Documentazione di SnapManager per Hyper-V.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+Benvenuto nella raccolta di informazioni di SnapManager per Hyper-V.

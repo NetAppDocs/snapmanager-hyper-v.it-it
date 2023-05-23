@@ -1,0 +1,22 @@
+---
+permalink: concept-report-path-settings.html 
+sidebar: sidebar 
+keywords: configure, report, path, setting, store, snapmanager, hyper-v, operation, configure, virtual, machine, dataset 
+summary: È possibile configurare le impostazioni del percorso dei report in modo da memorizzare i report per le operazioni di SnapManager per Hyper-V. È necessario configurare le impostazioni del percorso del report prima di poter aggiungere le risorse della macchina virtuale a un dataset. 
+---
+= Impostazioni del percorso del report
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile configurare le impostazioni del percorso dei report in modo da memorizzare i report per le operazioni di SnapManager per Hyper-V. È necessario configurare le impostazioni del percorso del report prima di poter aggiungere le risorse della macchina virtuale a un dataset.
+
+Se le impostazioni del report non sono configurate quando viene aggiunto un host principale Hyper-V a SnapManager per Hyper-V, è possibile configurare (e persino modificare) tali impostazioni in un secondo momento, utilizzando la Configurazione guidata.
+
+Se si configurano le impostazioni del percorso del report per un cluster host principale, è necessario creare manualmente la directory del report su ciascun nodo del cluster. Il percorso del report non deve risiedere in un volume condiviso del cluster (CSV) o in un LUN condiviso.
+
+*Informazioni correlate*
+
+http://technet.microsoft.com/library/jj612868.aspx["Microsoft TechNet: Utilizzo di volumi condivisi in cluster in un cluster di failover"]

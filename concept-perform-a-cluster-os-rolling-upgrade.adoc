@@ -1,0 +1,22 @@
+---
+permalink: concept-perform-a-cluster-os-rolling-upgrade.html 
+sidebar: sidebar 
+keywords: cluster, operating, system, os, rolling, upgrade, snapmanager, perform, reducing, reduce, downtime 
+summary: È possibile eseguire un aggiornamento a rotazione del sistema operativo del cluster per aggiornare il sistema operativo dei nodi del cluster senza interrompere SnapManager per Hyper-V. Questa funzione supporta la conformità agli SLA riducendo i downtime. 
+---
+= Eseguire un aggiornamento in sequenza del sistema operativo del cluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile eseguire un aggiornamento a rotazione del sistema operativo del cluster per aggiornare il sistema operativo dei nodi del cluster senza interrompere SnapManager per Hyper-V. Questa funzione supporta la conformità agli SLA riducendo i downtime.
+
+I cluster di failover che eseguono SnapManager per Hyper-V possono essere aggiornati da Windows Server 2012 R2 a Windows Server 2016 e Windows Server 2019 senza downtime.
+
+Per informazioni sui vantaggi dell'aggiornamento a rotazione del sistema operativo cluster, sul processo di installazione e sulle limitazioni, fare riferimento alle informazioni correlate.
+
+*Informazioni correlate*
+
+https://docs.microsoft.com/en-us/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade["Microsoft TechNet: Aggiornamento in sequenza del sistema operativo del cluster"]

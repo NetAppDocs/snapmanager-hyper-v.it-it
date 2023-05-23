@@ -1,0 +1,50 @@
+---
+permalink: task-map-luns-after-the-windows-server-2016-node-addition.html 
+sidebar: sidebar 
+keywords: perform, cluster, os, rolling, upgrade, procedure, unmap, lun, windows, r2, node, server, cluster, mixed, operating, system, map 
+summary: Quando si esegue un aggiornamento in sequenza del sistema operativo del cluster, è possibile utilizzare la procedura seguente per annullare la mappatura delle LUN dal nodo Windows 2012 R2 e rimapparle al nodo Windows Server 2016 dopo che sono state aggiunte al cluster. 
+---
+= Mappare i LUN in modalità sistema operativo misto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Quando si esegue un aggiornamento in sequenza del sistema operativo del cluster, è possibile utilizzare la procedura seguente per annullare la mappatura delle LUN dal nodo Windows 2012 R2 e rimapparle al nodo Windows Server 2016 dopo che sono state aggiunte al cluster.
+
+.Di cosa hai bisogno
+Il nodo Windows Server 2016 deve essere aggiunto al cluster.
+
+
+NOTE: L'aggiornamento a rotazione del cluster è supportato da Windows Server 2016 a Windows Server 2019
+
+.Fasi
+. Accedere a Gestore di sistema di ONTAP.
+. Selezionare il LUN mappato a Windows 2012 R2.
+. Fare clic su *Modifica* e selezionare *gruppi di iniziatori*.
++
+image::mixed_os_mode_3.gif[modalità sistema operativo misto 3]
+
+. Deselezionare l'igroup del nodo rimosso dal cluster.
+. Aggiungere un nuovo gruppo di iniziatori per tutti i nodi Windows 2016 appena aggiunti.
++
+image::mixed_os_mode_4.gif[modalità sistema operativo misto 4]
+
+. Selezionare la casella di controllo accanto al gruppo iniziatore appena creato per mappare il LUN all'host Windows 2016 aggiunto al cluster.
++
+image::mixed_os_mode_6.gif[modalità sistema operativo misto 6]
+
+. Ripetere i passaggi 4 e 6 per associare ogni LUN ai nodi Windows 2016.
++
+Tutte le LUN devono essere visibili nel nodo di Windows 2016.
+
+. Eseguire una nuova scansione dei dischi dallo strumento di gestione dei dischi nei nodi Windows 2016.
++
+image::mixed_os_mode_8.gif[modalità sistema operativo misto 8]
+
+. Aggiungere la LIF di gestione dello storage nelle nuove impostazioni del protocollo di trasporto (TPS) di Windows 2016 SnapDrive, quindi aggiornare i dischi.
++
+image::mixed_os_mode_9.gif[modalità sistema operativo misto 9]
+
+

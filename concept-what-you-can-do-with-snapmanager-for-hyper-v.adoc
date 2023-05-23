@@ -1,0 +1,33 @@
+---
+permalink: concept-what-you-can-do-with-snapmanager-for-hyper-v.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, enable, back, up, restore, multiple, virtual, machine, automatic, backup, task, schedule, scheduling, dataset, retention, replication 
+summary: SnapManager per Hyper-V consente di eseguire il backup e il ripristino di più macchine virtuali su più host. È possibile creare set di dati e applicarvi policy per automatizzare le attività di backup come pianificazione, conservazione e replica. 
+---
+= Cosa puoi fare con SnapManager per Hyper-V.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapManager per Hyper-V consente di eseguire il backup e il ripristino di più macchine virtuali su più host. È possibile creare set di dati e applicarvi policy per automatizzare le attività di backup come pianificazione, conservazione e replica.
+
+Con SnapManager per Hyper-V è possibile eseguire le seguenti attività:
+
+* Raggruppa le macchine virtuali in set di dati con gli stessi requisiti di protezione e applica policy a tali set di dati
+* Eseguire il backup e il ripristino di macchine virtuali dedicate e in cluster che risiedono su sistemi storage con software ONTAP
+* Backup e ripristino di macchine virtuali ospitate su Cluster Shared Volumes (CSV)
+* Automatizza i backup dei dataset utilizzando policy di pianificazione
+* Eseguire backup on-demand dei set di dati
+* Conserva i backup dei dataset per tutto il tempo necessario, utilizzando le policy di conservazione
+* Aggiornare la posizione di destinazione di SnapMirror al termine di un backup
+* Specificare gli script personalizzati da eseguire prima o dopo un backup
+* Ripristinare le macchine virtuali dai backup
+* Monitorare lo stato di tutti i processi pianificati ed in esecuzione
+* Gestire gli host in remoto da una console di gestione
+* Fornire report consolidati per le operazioni di backup, ripristino e configurazione dei set di dati
+* Eseguire una combinazione di backup coerenti con il crash e coerenti con l'applicazione
+* Eseguire operazioni di disaster recovery utilizzando i cmdlet PowerShell
+* Eseguire aggiornamenti in sequenza del sistema operativo del cluster
+

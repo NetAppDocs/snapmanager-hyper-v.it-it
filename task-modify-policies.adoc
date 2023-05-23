@@ -1,0 +1,26 @@
+---
+permalink: task-modify-policies.html 
+sidebar: sidebar 
+keywords: modify, policies, policy, protect, dataset, wizard 
+summary: È possibile modificare i criteri che proteggono i set di dati utilizzando la procedura guidata Modifica policy. 
+---
+= Modificare i criteri
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile modificare i criteri che proteggono i set di dati utilizzando la procedura guidata Modifica policy.
+
+.Fasi
+. Dal riquadro di navigazione, fare clic su menu:protezione[dataset].
+. Selezionare il set di dati che contiene i criteri che si desidera modificare.
+. Selezionare il criterio che si desidera modificare.
+. Dal riquadro delle azioni, fare clic su *Modify policy* (Modifica policy).
++
+Viene visualizzata la procedura guidata Modify Policy (Modifica policy).
+
+. Completare i passaggi della procedura guidata per modificare il criterio di protezione per il dataset.
+

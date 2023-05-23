@@ -1,0 +1,35 @@
+---
+permalink: task-add-policies.html 
+sidebar: sidebar 
+keywords: add, retention, schedule, scheduling, replication, policies, policy, script, dataset, data, protect 
+summary: È possibile aggiungere policy di conservazione, pianificazione e replica, oltre a script, ai set di dati in modo da proteggere i dati. 
+---
+= Aggiungere policy
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile aggiungere policy di conservazione, pianificazione e replica, oltre a script, ai set di dati in modo da proteggere i dati.
+
+.Di cosa hai bisogno
+È necessario disporre delle seguenti informazioni:
+
+* Nomi e descrizioni dei criteri
+* Informazioni di conservazione
+* Informazioni di scheduling
+* Informazioni sulle opzioni di backup
+* Informazioni sullo script di backup
+
+
+.Fasi
+. Dal riquadro di navigazione, fare clic su menu:protezione[dataset].
+. Selezionare il dataset a cui si desidera aggiungere i criteri.
+. Dal riquadro delle azioni, fare clic su *Aggiungi policy*.
++
+Viene visualizzata la procedura guidata Create Policy (Crea policy).
+
+. Completare i passaggi della procedura guidata per creare policy di protezione per il dataset.
+

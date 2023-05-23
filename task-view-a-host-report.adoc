@@ -1,0 +1,24 @@
+---
+permalink: task-view-a-host-report.html 
+sidebar: sidebar 
+keywords: view, report, host, manage, snapmanager, hyper-v 
+summary: È possibile visualizzare un report su un host gestito in SnapManager per Hyper-V. 
+---
+= Visualizzare un report host
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile visualizzare un report su un host gestito in SnapManager per Hyper-V.
+
+.Fasi
+. Dal riquadro di navigazione, fare clic su menu:Report[host].
+. Selezionare l'host che contiene il report che si desidera visualizzare.
+. Dal riquadro Report, selezionare il report che si desidera visualizzare e fare clic su *Visualizza report*.
++
+Il report di configurazione viene visualizzato in una finestra separata.
+
+

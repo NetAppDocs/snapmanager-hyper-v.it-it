@@ -1,0 +1,27 @@
+---
+permalink: task-update-the-dataset-and-snapinfo-across-all-nodes.html 
+sidebar: sidebar 
+keywords: perform, cluster, os, rolling, upgrade, dataset, snapinfo, node, updating, update 
+summary: Dopo aver eseguito un aggiornamento a rotazione del sistema operativo del cluster, è necessario aggiornare il dataset e SnapInfo su tutti i nodi. 
+---
+= Aggiornare il set di dati e SnapInfo su tutti i nodi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dopo aver eseguito un aggiornamento a rotazione del sistema operativo del cluster, è necessario aggiornare il dataset e SnapInfo su tutti i nodi.
+
+.Di cosa hai bisogno
+++ ++
+
+
+NOTE: L'aggiornamento a rotazione del cluster è supportato da Windows Server 2016 a Windows Server 2019; il backup su disco condiviso non è supportato nei sistemi operativi in modalità mista.
+
+.Fasi
+. Modificare tutti i set di dati nel nodo Windows 2012 R2.
+. Verificare che tutti i set di dati disponibili siano visibili nel nodo Windows 2016.
+. Impostare il percorso SnapInfo sul nodo Windows 2012 R2.
+. Verificare che sul nodo di Windows 2016 sia visualizzato il percorso SnapInfo corretto.
+

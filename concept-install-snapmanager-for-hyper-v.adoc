@@ -1,0 +1,14 @@
+---
+permalink: concept-install-snapmanager-for-hyper-v.html 
+sidebar: sidebar 
+keywords: install, snapmanager, hyper-v, practice, configure, environment, snapdrive 
+summary: 'Prima di installare SnapManager per Hyper-V, è consigliabile decidere come configurare l"ambiente, che include l"installazione di SnapDrive per Windows su tutti gli host Hyper-V prima dell"installazione di SnapManager per Hyper-V.' 
+---
+= Installare SnapManager per Hyper-V.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Prima di installare SnapManager per Hyper-V, è consigliabile decidere come configurare l'ambiente, che include l'installazione di SnapDrive per Windows su tutti gli host Hyper-V prima dell'installazione di SnapManager per Hyper-V.

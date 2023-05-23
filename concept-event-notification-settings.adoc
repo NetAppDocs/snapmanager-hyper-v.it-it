@@ -1,0 +1,20 @@
+---
+permalink: concept-event-notification-settings.html 
+sidebar: sidebar 
+keywords: configure, configuring, event, notification, setting, send, e-mail, syslog, autosupport, message 
+summary: È possibile configurare le impostazioni di notifica degli eventi per inviare messaggi e-mail, Syslog e AutoSupport in caso di evento. 
+---
+= Impostazioni di notifica degli eventi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile configurare le impostazioni di notifica degli eventi per inviare messaggi e-mail, Syslog e AutoSupport in caso di evento.
+
+Se le impostazioni di notifica degli eventi non sono configurate quando si aggiunge un host principale Hyper-V a SnapManager per Hyper-V, è possibile configurarle in un secondo momento, utilizzando la Configurazione guidata.
+
+È possibile modificare le impostazioni di notifica degli eventi utilizzando la Configurazione guidata anche dopo l'aggiunta dell'host a SnapManager per Hyper-V.
+
+È possibile configurare le impostazioni di notifica degli eventi prima di aggiungere risorse di macchine virtuali a un dataset.

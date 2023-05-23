@@ -1,0 +1,27 @@
+---
+permalink: task-remove-a-hyper-v-parent-host.html 
+sidebar: sidebar 
+keywords: remove, hyper-v, parent, host, cluster, snapmanager, removing 
+summary: È possibile rimuovere un host di origine Hyper-V o un cluster di host di origine quando non si desidera più gestirlo utilizzando SnapManager per Hyper-V. 
+---
+= Rimuovere un host padre Hyper-V o un cluster di host padre
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile rimuovere un host di origine Hyper-V o un cluster di host di origine quando non si desidera più gestirlo utilizzando SnapManager per Hyper-V.
+
+.Fasi
+. Dal riquadro di navigazione, fare clic su menu:protezione[host].
+. Selezionare l'host o il cluster host che si desidera rimuovere.
+. Nel riquadro *azioni*, fare clic su *Rimuovi*.
++
+È possibile selezionare *Delete all VM backups* (Elimina tutti i backup delle macchine virtuali) per eliminare i backup delle macchine virtuali associati all'host.
+
++
+L'host o il cluster host principale Hyper-V viene rimosso da SnapManager per la gestione Hyper-V ma non viene eliminato in modo permanente. Anche le macchine virtuali appartenenti a quel cluster host o host vengono rimosse da tutti i set di dati a cui appartengono.
+
+

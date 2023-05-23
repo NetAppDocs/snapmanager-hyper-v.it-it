@@ -1,0 +1,36 @@
+---
+permalink: task-create-a-dataset.html 
+sidebar: sidebar 
+keywords: create, creating, dataset, virtual, machine, resource, protection, requirement 
+summary: È possibile creare set di dati per le risorse delle macchine virtuali che condividono gli stessi requisiti di protezione. È possibile aggiungere macchine virtuali a più set di dati, in base alle necessità. 
+---
+= Creare un dataset
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile creare set di dati per le risorse delle macchine virtuali che condividono gli stessi requisiti di protezione. È possibile aggiungere macchine virtuali a più set di dati, in base alle necessità.
+
+.Di cosa hai bisogno
+È necessario disporre delle seguenti informazioni:
+
+* Nome e descrizione del dataset
+* Risorse di macchine virtuali che si intende aggiungere al set di dati
+
+
+.A proposito di questa attività
+I dischi dedicati e condivisi che appartengono allo stesso cluster host non devono essere inseriti nello stesso set di dati. L'aggiunta di questi tipi di risorse a un singolo set di dati può causare un errore nel backup del set di dati. È possibile utilizzare un solo tipo di VM per set di dati: NAS o SAN. Non è possibile disporre di set di dati in modalità mista.
+
+La casella di controllo Validate Dataset (convalida dataset) è selezionata per impostazione predefinita. SnapManager per Hyper-V verifica la presenza di eventuali errori di configurazione in tutte le macchine virtuali durante la creazione o la modifica di un dataset. Se non si desidera attivare la convalida del dataset, assicurarsi che la casella di controllo non sia selezionata.
+
+.Fasi
+. Dal riquadro di navigazione, fare clic su menu:protezione[dataset].
+. Dal riquadro delle azioni, fare clic su *Create dataset* (Crea dataset).
+. Completare le pagine della procedura guidata.
+
+
+.Al termine
+Aggiungere quindi i criteri di protezione al dataset creato.

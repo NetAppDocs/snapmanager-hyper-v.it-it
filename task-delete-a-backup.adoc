@@ -1,0 +1,31 @@
+---
+permalink: task-delete-a-backup.html 
+sidebar: sidebar 
+keywords: delete, backup, associate, dataset, virtual, machine, deleting 
+summary: È possibile eliminare uno o più backup associati a un dataset o a una macchina virtuale. 
+---
+= Eliminare un backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile eliminare uno o più backup associati a un dataset o a una macchina virtuale.
+
+.Fasi
+. Dal riquadro di navigazione, fare clic su *Recovery*.
+. Selezionare la macchina virtuale all'interno del set di dati che contiene il backup che si desidera eliminare.
++
+Se si elimina un backup associato a un set di dati, vengono eliminati anche i backup associati alle macchine virtuali appartenenti a tale set di dati. Se si elimina un backup associato a una macchina virtuale, solo tale backup viene eliminato.
+
+. Nel riquadro Backup, selezionare il backup che si desidera eliminare.
+. Fare clic su *Delete* (Elimina).
++
+Viene visualizzata la finestra di dialogo *Delete Backup* (Elimina backup). È possibile eliminare i backup per una macchina virtuale selezionata o per un intero dataset.
+
+. Selezionare l'opzione appropriata e fare clic su *Confirm Delete* (Conferma eliminazione).
++
+È possibile visualizzare lo stato dell'operazione di eliminazione del backup nella finestra di stato.
+
+

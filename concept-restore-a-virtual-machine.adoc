@@ -1,0 +1,22 @@
+---
+permalink: concept-restore-a-virtual-machine.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, restore, virtual, machine, vm, cluster, restoring, backup, copy 
+summary: 'È possibile utilizzare SnapManager per Hyper-V per ripristinare una macchina virtuale (VM) da una copia di backup. È inoltre possibile ripristinare una macchina virtuale che fa parte di un cluster. SnapManager per Hyper-V determina il nodo appropriato nel cluster in cui ripristinare la macchina virtuale.' 
+---
+= Ripristinare una macchina virtuale da una copia di backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile utilizzare SnapManager per Hyper-V per ripristinare una macchina virtuale (VM) da una copia di backup. È inoltre possibile ripristinare una macchina virtuale che fa parte di un cluster. SnapManager per Hyper-V determina il nodo appropriato nel cluster in cui ripristinare la macchina virtuale.
+
+Per ripristinare una macchina virtuale, SnapManager per Hyper-V utilizza la funzionalità di ripristino a livello di file di SnapDrive per Windows. È possibile distribuire i file associati di una macchina virtuale, inclusi il file di configurazione, le copie Snapshot e qualsiasi VHD, su più LUN ONTAP. Un LUN può contenere file appartenenti a più macchine virtuali.
+
+Se un LUN contiene solo i file associati alla macchina virtuale che si desidera ripristinare, SnapManager per Hyper-V ripristina il LUN utilizzando la funzione di ripristino split del clone del LUN (LCSR). Se un LUN contiene file aggiuntivi non associati alla macchina virtuale che si desidera ripristinare, SnapManager per Hyper-V ripristina la macchina virtuale utilizzando l'operazione di ripristino della copia del file.
+
+*Informazioni correlate*
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30049["Documentazione NetApp: SnapDrive per Windows (release correnti)"]

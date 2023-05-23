@@ -1,0 +1,30 @@
+---
+permalink: task-download-snapmanager-for-hyper-v.html 
+sidebar: sidebar 
+keywords: install, snapmanager, hyper-v, download, software, package, netapp, support, site 
+summary: Prima di installare SnapManager per Hyper-V, è necessario scaricare il pacchetto software dal sito del supporto NetApp. 
+---
+= Scarica SnapManager per Hyper-V.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Prima di installare SnapManager per Hyper-V, è necessario scaricare il pacchetto software da link:http://mysupport.netapp.com["Sito di supporto NetApp"^].
+
+.Di cosa hai bisogno
+È necessario disporre delle credenziali di accesso per il NetApp Support Site.
+
+.Fasi
+. Accedere al sito di supporto NetApp.
+. Accedere alla pagina Download del software.
+. Dall'elenco a discesa, selezionare il sistema operativo su cui si sta installando SnapManager per Hyper-V e fare clic su *Go!*
+. Fare clic su *Visualizza e scarica* per la versione del software che si desidera installare.
+. Nella pagina Description (Descrizione), fare clic su *Continue* (continua).
+. Leggere e accettare il contratto di licenza.
+. Nella pagina Download, fare clic sul collegamento relativo al file di installazione.
+. Salvare il file SnapManager per Hyper-V in una directory locale o di rete.
+. Fare clic su *Save file* (Salva file).
+. Verificare il checksum per assicurarsi che il software sia stato scaricato correttamente.
+

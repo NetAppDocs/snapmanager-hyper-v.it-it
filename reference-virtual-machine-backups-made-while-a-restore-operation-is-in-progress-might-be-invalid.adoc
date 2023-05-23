@@ -1,0 +1,25 @@
+---
+permalink: reference-virtual-machine-backups-made-while-a-restore-operation-is-in-progress-might-be-invalid.html 
+sidebar: sidebar 
+keywords: virtual, machine, backup, restore, operation, progress, invalid 
+summary: 'I backup delle macchine virtuali eseguiti durante un"operazione di ripristino potrebbero non essere validi.' 
+---
+= I backup delle macchine virtuali eseguiti durante un'operazione di ripristino potrebbero non essere validi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Problema*
++
+Un backup coerente con l'applicazione creato durante un'operazione di ripristino potrebbe non essere valido. Il ripristino di una macchina virtuale da questo backup incompleto comporta la perdita di dati e l'eliminazione della macchina virtuale.
+
+* *Causa*
++
+Le informazioni di configurazione di SnapManager per Hyper-V non sono presenti nella copia di backup. L'operazione di backup è riuscita, ma la copia di backup non è valida perché le informazioni di configurazione della macchina virtuale non sono incluse. Le operazioni di ripristino di SnapManager per Hyper-V eliminano le informazioni di configurazione della macchina virtuale dall'host Hyper-V prima di eseguire un'operazione di ripristino. Questo comportamento è stato progettato in Microsoft Hyper-V Writer.
+
+* *Azione correttiva*
++
+Assicurarsi che la pianificazione del backup non coincida con l'operazione di ripristino o che il backup on-demand che si desidera eseguire non si sovrapponga a un'operazione di ripristino sugli stessi dati.
+
+

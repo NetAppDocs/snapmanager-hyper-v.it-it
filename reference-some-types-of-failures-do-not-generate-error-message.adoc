@@ -1,0 +1,25 @@
+---
+permalink: reference-some-types-of-failures-do-not-generate-error-message.html 
+sidebar: sidebar 
+keywords: backup, failure, result, partial 
+summary: Alcuni tipi di errori di backup non comportano errori di backup parziali. 
+---
+= Alcuni tipi di errori di backup non comportano errori di backup parziali
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Problema*
++
+Se una macchina virtuale in un dataset presenta un errore, SnapManager per Hyper-V non completa correttamente il backup del dataset e, in alcuni scenari, non genera un errore parziale. In queste situazioni, il backup dell'intero set di dati non riesce.
+
+* *Esempio*
++
+In uno scenario in cui un volume del sistema di storage supera il limite di copia Snapshot di 255, SnapManager per Hyper-V genera un errore parziale anche se il problema è associato a un sottoinsieme di macchine virtuali nel dataset.
+
+* *Azione correttiva*
++
+Per completare correttamente l'operazione di backup, è necessario risolvere il problema della macchina virtuale. Se ciò non fosse possibile, è possibile spostare temporaneamente la macchina virtuale fuori dal set di dati o creare un set di dati che contenga solo macchine virtuali che non presentano problemi.
+
+

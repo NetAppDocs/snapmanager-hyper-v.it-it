@@ -1,0 +1,25 @@
+---
+permalink: reference-backup-failed-for-the-following-vm-s-since-it-cannot-be-backedup-online-or-no-vm-to-be-found-for-backup.html 
+sidebar: sidebar 
+keywords: backup, fail, follow, vm, backed, up, online 
+summary: Backup non riuscito per le seguenti macchine virtuali poiché non è possibile eseguirne il backup online o non è stata trovata alcuna macchina virtuale per il backup. 
+---
+= Backup non riuscito per le seguenti macchine virtuali poiché non è possibile eseguirne il backup online o non è stata trovata alcuna macchina virtuale per il backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* *Messaggio*
++
+`Backup Failed for the following VM(s) since it cannot be backed up online or NO VM to be found for backup`
+
+* *Descrizione*
++
+Questo messaggio viene visualizzato quando si esegue il backup di una macchina virtuale Windows 2012 in un'applicazione padre di Windows 2008 R2 SP1 Hyper-V senza l'opzione di backup della macchina virtuale con stato salvato attivata.
+
+* *Azione correttiva*
++
+Per i backup di Windows 2012, eseguire il backup con `Allow saved state` Opzione di backup della macchina virtuale attivata.
+
+

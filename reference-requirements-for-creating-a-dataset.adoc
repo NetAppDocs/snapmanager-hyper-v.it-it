@@ -1,0 +1,52 @@
+---
+permalink: reference-requirements-for-creating-a-dataset.html 
+sidebar: sidebar 
+keywords: specific, requirement, create, dataset, protect, data, host, cluster, snapmanager, hyper-v 
+summary: Quando si desidera creare set di dati per proteggere i dati, è necessario soddisfare requisiti specifici. 
+---
+= Requisiti per la creazione di un dataset
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Quando si desidera creare set di dati per proteggere i dati, è necessario soddisfare requisiti specifici. È necessario prima aggiungere l'host o il cluster host a SnapManager per Hyper-V, quindi aggiungere le macchine virtuali al cluster host o host.
+
+
+
+== Nome e descrizione del dataset
+
+Quando si assegna un nome al dataset, è necessario utilizzare una convenzione di naming presso il sito per aiutare gli amministratori a individuare e identificare i dataset, limitatamente ai seguenti caratteri:
+
+* da a a z
+* Da a a Z
+* da 0 a 9
+* _ (carattere di sottolineatura)
+* - (trattino)
+
+
+
+
+== Risorse di dataset
+
+È necessario aggiungere l'host o il cluster host a SnapManager per Hyper-V prima di aggiungere risorse come macchine virtuali al set di dati.
+
+È possibile aggiungere host, macchine virtuali dedicate o macchine virtuali condivise a un set di dati. Se si aggiunge un host, si aggiungono tutte le macchine virtuali che appartengono all'host. È inoltre possibile aggiungere al dataset macchine virtuali appartenenti a host diversi. Le macchine virtuali possono appartenere a più set di dati.
+
+
+NOTE: Le macchine virtuali dedicate e condivise che appartengono allo stesso cluster host non devono esistere nello stesso set di dati. L'aggiunta di questi tipi di risorse a un singolo set di dati può causare un errore nel backup del set di dati.
+
+
+
+== Macchine virtuali e LUN ONTAP
+
+Tutti i file associati alle macchine virtuali, inclusi i file di configurazione, le copie Snapshot e i VHD, devono risiedere su LUN ONTAP.
+
+
+
+== Consumo delle risorse del dataset
+
+Su un host può verificarsi una sola operazione di backup coerente con l'applicazione alla volta. Se le stesse macchine virtuali appartengono a set di dati diversi, non è necessario pianificare un backup coerente con l'applicazione dei set di dati contemporaneamente. In questo caso, una delle operazioni di backup non riesce.
+
+Quando si crea un dataset, è necessario selezionare tutte le macchine virtuali che risiedono su una determinata LUN ONTAP. In questo modo è possibile ottenere tutti i backup in una copia Snapshot e ridurre il consumo di spazio nel sistema storage.

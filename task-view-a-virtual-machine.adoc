@@ -1,0 +1,26 @@
+---
+permalink: task-view-a-virtual-machine.html 
+sidebar: sidebar 
+keywords: virtual, machine, tab, vhd, detail, pane, vm, information, monitor, status, view 
+summary: 'Dalla scheda Virtual Machine (macchina virtuale) e VHD (VHD) del riquadro Details (Dettagli) di una macchina virtuale, è possibile visualizzare informazioni e monitorare lo stato di tale macchina.' 
+---
+= Visualizzare una macchina virtuale
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dalla scheda Virtual Machine (macchina virtuale) e VHD (VHD) del riquadro Details (Dettagli) di una macchina virtuale, è possibile visualizzare informazioni e monitorare lo stato di tale macchina.
+
+.Fasi
+. Dal riquadro di navigazione, fare clic su menu:protezione[host > protezione > dataset].
+. Selezionare il set di dati o l'host a cui appartiene la macchina virtuale.
+. Selezionare la macchina virtuale appropriata.
+
+
+.Risultati
+La scheda Virtual Machine (macchina virtuale) visualizza il nome, il GUID e lo stato della macchina virtuale selezionata.
+
+La scheda VHD visualizza il disco di sistema, il punto di montaggio, il percorso completo VHD, il percorso LUN, il nome del sistema di storage, numero di serie e nome del volume associati alla macchina virtuale selezionata.

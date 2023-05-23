@@ -1,0 +1,30 @@
+---
+permalink: task-delete-a-dataset.html 
+sidebar: sidebar 
+keywords: delete, dataset, protection, change, deleting 
+summary: È possibile eliminare un set di dati man mano che le esigenze di protezione cambiano. 
+---
+= Eliminare un dataset
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile eliminare un set di dati man mano che le esigenze di protezione cambiano.
+
+.A proposito di questa attività
+L'eliminazione di un set di dati non elimina le macchine virtuali che appartengono al set di dati. Una volta eliminato il set di dati, le macchine virtuali ad esso associate diventano non protette se non appartengono a un altro set di dati.
+
+.Fasi
+. Dal riquadro di navigazione, fare clic su menu:protezione[dataset].
+. Selezionare il dataset che si desidera eliminare.
+. Dal riquadro delle azioni, fare clic su *Delete* (Elimina) e fare clic su *OK* per eliminare il set di dati.
++
+L'eliminazione del dataset elimina anche i processi pianificati da tutti gli host che sono membri del dataset. SnapManager per Hyper-V non gestisce più la conservazione dei backup quando si elimina il dataset, anche se viene ricreato con lo stesso nome.
+
+
+
+.Risultati
+SnapManager per Hyper-V non protegge più le risorse associate al dataset cancellato, a meno che tali risorse non appartengano a un altro dataset.

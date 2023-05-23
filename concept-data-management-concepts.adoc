@@ -1,0 +1,80 @@
+---
+permalink: concept-data-management-concepts.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, dataset, policies, policy, enable, group, virtual, machine, apply, rule, retention, data, management, concept 
+summary: SnapManager per Hyper-V utilizza set di dati e policy, che consentono di raggruppare le macchine virtuali e applicare regole a questi gruppi per governarne il comportamento. 
+---
+= Concetti di gestione dei dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapManager per Hyper-V utilizza set di dati e policy, che consentono di raggruppare le macchine virtuali e applicare regole a questi gruppi per governarne il comportamento. Queste informazioni sono utili negli scenari in cui si utilizza SnapManager per Hyper-V per pianificare un backup e specificare un criterio di conservazione per il backup.
+
+* *set di dati*
++
+Un set di dati è un gruppo di macchine virtuali (VM) che consente di proteggere i dati utilizzando policy di conservazione, pianificazione e replica. È possibile utilizzare i set di dati per raggruppare le macchine virtuali con gli stessi requisiti di protezione. Una macchina virtuale può far parte di più set di dati.
+
+* *Host padre Hyper-V*
++
+Gli host principali Hyper-V sono server fisici su cui è abilitato il ruolo Hyper-V. Gli host che contengono macchine virtuali vengono aggiunti a SnapManager per Hyper-V per la protezione e il ripristino. SnapManager per Hyper-V deve essere installato e in esecuzione su ciascun host principale Hyper-V.
+
+* *risorse non protette*
++
+Le risorse non protette sono macchine virtuali che non fanno parte di alcun set di dati. È possibile proteggere queste risorse aggiungendole a un dataset.
+
+* *macchine virtuali*
++
+Una macchina virtuale eseguita su un host di origine Hyper-V è una rappresentazione di una macchina fisica, con il proprio sistema operativo, applicazioni e hardware.
+
++
+SnapManager per Hyper-V tiene traccia dell'identificatore univoco globale, o GUID, della macchina virtuale e non del nome della macchina virtuale. Se si elimina una macchina virtuale protetta da SnapManager per Hyper-V e si crea una macchina virtuale diversa con lo stesso nome, la nuova macchina virtuale non viene protetta, in quanto dispone di un GUID diverso.
+
+* *console di gestione*
++
+Le console di gestione sono computer su cui SnapManager per Hyper-V è installato e in esecuzione come client. È possibile utilizzare le console di gestione per gestire in remoto le operazioni di SnapManager per Hyper-V su un host remoto di origine Hyper-V.
+
+* *politiche di pianificazione*
++
+I criteri di pianificazione assegnano i processi di backup per tempi specifici, consentendo di automatizzare il processo di pianificazione. È possibile aggiungere più policy di scheduling, che si applicano a tutte le macchine virtuali che sono membri del dataset. SnapManager per Hyper-V utilizza l'utilità di pianificazione di Windows per creare attività pianificate.
+
+* *politiche di conservazione*
++
+Un criterio di conservazione è il modo in cui gestisci la conservazione del backup dei dataset in SnapManager per Hyper-V. I criteri di conservazione determinano il tempo di conservazione di un backup del dataset, in base al tempo o al numero di copie di backup.
+
++
+I limiti stabiliti in una policy di conservazione garantiscono che il backup dei dati non comprometta la capacità dello storage futura.
+
++
+In SnapManager per Hyper-V è possibile impostare i seguenti periodi di conservazione:
+
++
+** Un'ora
+** Un giorno
+** Una settimana
+** Un mese
+** Senza limiti
+
+
+
+
+
+NOTE: È possibile specificare un periodo di conservazione una volta per set di dati.
+
+Dopo aver scelto la frequenza di eliminazione dei backup dei dataset, è possibile scegliere di eliminare i backup precedenti a un determinato periodo di tempo o quelli superiori a un totale massimo.
+
+Se il sistema sembra conservare i vecchi backup, controllare le policy di conservazione. Tutti gli oggetti di cui viene eseguito il backup che condividono una copia Snapshot devono soddisfare i criteri di eliminazione del backup affinché la policy di conservazione possa attivare la rimozione di una copia Snapshot.
+
+* *policy di replica*
++
+Un criterio di replica determina se la destinazione di SnapMirror viene aggiornata dopo un'operazione di backup riuscita. SnapManager per Hyper-V supporta solo SnapMirror basato su volume. Prima di eseguire un aggiornamento di SnapMirror, è necessario configurare una relazione SnapMirror sui due sistemi storage. Questo è necessario sia per l'origine che per la destinazione.
+
+
+
+*Informazioni correlate*
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1368826["Guida al backup e ripristino online per la protezione dei dati di Data ONTAP 8.2 per 7-Mode"]
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30049["Documentazione NetApp: SnapDrive per Windows (release correnti)"]

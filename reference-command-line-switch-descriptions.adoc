@@ -1,0 +1,165 @@
+---
+permalink: reference-command-line-switch-descriptions.html 
+sidebar: sidebar 
+keywords: command, line, switch, perform, silent, installation, enable, script, snapmanager, hyper-v 
+summary: 'È possibile utilizzare le opzioni della riga di comando per eseguire un"installazione invisibile all"utente, che consente di utilizzare uno script di installazione per installare SnapManager per Hyper-V.' 
+---
+= Elenco e descrizione degli switch della riga di comando per l'installazione automatica
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile utilizzare le opzioni della riga di comando per eseguire un'installazione invisibile all'utente, che consente di utilizzare uno script di installazione per installare SnapManager per Hyper-V.
+
+La seguente tabella fornisce un elenco di valori e descrive ciascuna delle opzioni di installazione disponibili dalla riga di comando.
+
+|===
+| Switch | Valore | Descrizione 
+
+
+ a| 
+SILENT_MODE=
+ a| 
+1
+ a| 
+Consente a SnapManager per Hyper-V di eseguire correttamente la funzione di installazione automatica. Questo switch è necessario per le prime installazioni, gli aggiornamenti e le disinstallazioni complete.
+
+
+
+ a| 
+REINSTALLMODE=
+ a| 
+ a| 
+Specifica la modalità di reinstallazione da utilizzare.
+
+
+
+ a| 
+REINSTALLMODE=
+ a| 
+v.
+ a| 
+Indica che l'installazione viene eseguita dal pacchetto di origine e che il pacchetto locale viene memorizzato nella cache. Non utilizzare questa opzione per le prime installazioni di SnapManager per Hyper-V. Reinstalla tutti i file indipendentemente dalla versione, dalla data o dal valore del checksum.
+
+
+
+ a| 
+REINSTALLMODE=
+ a| 
+r
+ a| 
+Reinstalla SnapManager per i file Hyper-V se sono presenti versioni precedenti o se mancano dei file.
+
+
+
+ a| 
+REINSTALLMODE=
+ a| 
+o
+ a| 
+Indica che tutte le voci di registro richieste da SnapManager per Hyper-V da HKEY_LOCAL_MACHINE e HKEY_CLASSES_ROOT devono essere riscritte.
+
+
+
+ a| 
+REINSTALLMODE=
+ a| 
+m
+ a| 
+Indica che tutte le voci di registro richieste da SnapManager per Hyper-V da HKEY_CURRENT_USER e HKEY_USERS devono essere riscritte.
+
+
+
+ a| 
+REINSTALLMODE=
+ a| 
+u
+ a| 
+Reinstalla tutti i collegamenti e recupera tutte le icone, sovrascrivendo eventuali collegamenti e icone esistenti.
+
+
+
+ a| 
+REINSTALL=
+ a| 
+TUTTO
+ a| 
+Reinstalla tutte le funzionalità di SnapManager per Hyper-V.
+
+
+
+ a| 
+/Li
+ a| 
+nome file
+ a| 
+Specifica che deve essere generato un log di installazione di SnapDrive.
+
+
+
+ a| 
+SMHV_LICENSE=
+ a| 
+licenza
+ a| 
+Specifica la licenza SnapManager per Hyper-V appropriata e valida.
+
+
+
+ a| 
+INSTALLDIR=
+ a| 
+directory di installazione di destinazione
+ a| 
+Specifica la directory di installazione di destinazione in cui è installato SnapManager per Hyper-V. Questo switch è necessario solo quando si installa SnapManager per Hyper-V per la prima volta.
+
+
+
+ a| 
+SVCUSERNAME=
+ a| 
+DOMINIO/nome utente
+ a| 
+Specifica il dominio e il nome utente utilizzati da SnapManager per Hyper-V durante l'installazione automatica.
+
+
+
+ a| 
+SMHVSRV_PASSWORD=
+ a| 
+password
+ a| 
+Specifica la password per l'utente SMHVSRV_PASSWORD.
+
+
+
+ a| 
+SMHVSRV_CONFIRMUSERPASSWORD=
+ a| 
+password
+ a| 
+Conferma la password per l'utente SMHVSRV_CONFIRMUSERPASSWORD.
+
+
+
+ a| 
+PORTA_TCP_SMHV_WEBSRV
+ a| 
+numero di porta
+ a| 
+Specifica la porta utilizzata dal servizio Web SnapManager per Hyper-V per Net.TCP. La porta predefinita è 808.
+
+|===
+La seguente sintassi mostra un'installazione nuova:
+
+`setup.exe /s /v"/qn SILENT_MODE=1 /L*v SMHVInstall.log SVCUSERNAME=Domain\User Name SMHVSRV_PASSWORD=password SMHVSRV_CONFIRMUSERPASSWORD=password"`
+
+La seguente sintassi mostra un aggiornamento:
+
+`setup.exe /s /v"/qn REINSTALLMODE=vamus REINSTALL=ALL SILENT_MODE=1 /L*v SMHVUpgrade.log SVCUSERNAME=Domain\User Name SMHVSRV_PASSWORD=password SMHVSRV_CONFIRMUSERPASSWORD=password"`
+
+La seguente sintassi mostra una disinstallazione:
+
+`Setup.exe /s /x /v"/qn SILENT_MODE=1 /L*v SMHVuninstall.log"`

@@ -1,0 +1,28 @@
+---
+permalink: task-monitor-backup-jobs.html 
+sidebar: sidebar 
+keywords: view, schedule, job, particular, dataset, management, window, schedule, tab, backup, monitor, backup 
+summary: È possibile visualizzare i processi di backup pianificati per un determinato set di dati utilizzando la scheda Scheduled della finestra Gestione processi. È inoltre possibile visualizzare i processi di backup e ripristino attualmente in esecuzione utilizzando la scheda in esecuzione della finestra Gestione processi. 
+---
+= Monitorare i processi di backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile visualizzare i processi di backup pianificati per un determinato set di dati utilizzando la scheda Scheduled della finestra Gestione dei job. È inoltre possibile visualizzare i processi di backup e ripristino attualmente in esecuzione utilizzando la scheda esecuzione della finestra Gestione dei job.
+
+.Fasi
+. Dal riquadro di navigazione, fare clic su *Jobs*.
+. Fare clic sulla scheda *Scheduled* o sulla scheda *Running*.
+. Selezionare il processo di backup pianificato o in esecuzione o il processo di ripristino che si desidera monitorare.
++
+Le informazioni relative al lavoro vengono visualizzate nel riquadro Dettagli.
+
+. Utilizzare il report del processo in esecuzione nella vista *Report*, se si desidera visualizzare un report attivo di un processo in esecuzione.
++
+
+NOTE: È inoltre possibile monitorare i processi di backup con la console SCOM di Microsoft. Per ulteriori informazioni, visitare il sito Web Microsoft.
+
+
